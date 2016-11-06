@@ -517,9 +517,21 @@ body #mv .mv__title img.text {
 	margin-top: 22px;
 }
 
+body #profile .block {
+	zoom: 1;
+}
+
+body #profile .block:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 body #profile .profile__baloon {
 	background-image: url("../images/profile_baloon.png");
 	background-repeat: no-repeat;
+	width: 525px;
+	float: left;
 }
 
 body #profile .profile__baloon .intro {
@@ -535,6 +547,10 @@ body #profile .profile__baloon .text {
 	padding-left: 31px;
 	padding-bottom: 25px;
 	line-height: 1.8;
+}
+
+body #profile .profile__autorimage {
+	float: left;
 }
 
 body #profile .profile__title {

@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "../common/css/normalize";
+@import "../common/css/sato_mixin";
 #main{
 	background-image: url(../images/bg.jpg);
 	background-position: top center;
@@ -47,9 +48,14 @@ body{
 		}
 	}
 	#profile{
+		.block{
+			@include clearfix;
+		}
 		.profile__baloon{
 			background-image: url("../images/profile_baloon.png");
 			background-repeat: no-repeat;
+			width: 525px;
+			float: left;
 			.intro{
 				font-size:12px;
 				padding-top: 25px;
@@ -63,6 +69,9 @@ body{
 				padding-bottom: 25px;
 				line-height: 1.8;
 			}
+		}
+		.profile__autorimage{
+			float: left;
 		}
 		.profile__title{
 			text-align: center;
