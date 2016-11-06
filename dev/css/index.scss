@@ -87,6 +87,25 @@ body{
 			margin-left: 22px;
 		}
 	}
+	#copylightworks{
+		margin-top: 757px;
+		.copylightworks__title{
+			text-align: center;
+		}
+		.lists{
+			margin-top: 58px;
+			.list{
+				margin-right: 12px;
+				margin-bottom: 10px;
+				font-size: 0;
+				float: left;
+				&:nth-child(9n){
+					margin-right: 0;
+				}
+
+			}
+		}
+	}
 	.footter{
 
 	}
