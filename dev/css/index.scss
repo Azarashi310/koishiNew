@@ -72,11 +72,22 @@ body{
 		}
 		.profile__autorimage{
 			float: left;
+			margin-top: 15px;
+			margin-left: 7px;
 		}
 		.profile__title{
 			text-align: center;
 			padding:114px 0 0 0;
 		}
+	}
+	#character{
+		margin-top: 177px;
+		.character__title{
+			text-align: center;
+			margin-left: 22px;
+		}
+		
+
 	}
 	.footter{
 
