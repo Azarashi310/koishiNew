@@ -42,6 +42,25 @@ block contents
 		.inner
 			.character__title
 				img.text(src="./images/character_title.png",alt="キャラクター CHARACTER")
+			.block
+				.character__thumb
+					ul.thumb__lists
+						-for(var i = 1;i < 30;i++){
+							li.list
+								img(src="",alt="")
+						-}
+				.character__detail
+					ul.slideshow
+						-for(var i = 1; i < 30; i++){
+							li.slide
+								.character
+									img(src="",alt="")
+								.name
+									img(src="",alt="")
+								.description
+									p.text.
+										テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま
+						-}
 	.stamp
 		.title
 			img.text(src="")
