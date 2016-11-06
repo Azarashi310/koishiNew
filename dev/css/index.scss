@@ -50,6 +50,19 @@ body{
 		.profile__baloon{
 			background-image: url("../images/profile_baloon.png");
 			background-repeat: no-repeat;
+			.intro{
+				font-size:12px;
+				padding-top: 25px;
+				padding-left: 31px;
+				line-height: 1.7;
+			}
+			.text{
+				font-size: 12px;
+				padding-top: 22px;
+				padding-left: 31px;
+				padding-bottom: 25px;
+				line-height: 1.8;
+			}
 		}
 		.profile__title{
 			text-align: center;

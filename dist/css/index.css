@@ -522,6 +522,21 @@ body #profile .profile__baloon {
 	background-repeat: no-repeat;
 }
 
+body #profile .profile__baloon .intro {
+	font-size: 12px;
+	padding-top: 25px;
+	padding-left: 31px;
+	line-height: 1.7;
+}
+
+body #profile .profile__baloon .text {
+	font-size: 12px;
+	padding-top: 22px;
+	padding-left: 31px;
+	padding-bottom: 25px;
+	line-height: 1.8;
+}
+
 body #profile .profile__title {
 	text-align: center;
 	padding: 114px 0 0 0;
