@@ -569,3 +569,26 @@ body #character .character__title {
 	margin-left: 22px;
 }
 
+body #copylightworks {
+	margin-top: 757px;
+}
+
+body #copylightworks .copylightworks__title {
+	text-align: center;
+}
+
+body #copylightworks .lists {
+	margin-top: 58px;
+}
+
+body #copylightworks .lists .list {
+	margin-right: 12px;
+	margin-bottom: 10px;
+	font-size: 0;
+	float: left;
+}
+
+body #copylightworks .lists .list:nth-child(9n) {
+	margin-right: 0;
+}
+

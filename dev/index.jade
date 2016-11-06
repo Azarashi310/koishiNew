@@ -42,6 +42,15 @@ block contents
 		.inner
 			.character__title
 				img.text(src="./images/character_title.png",alt="キャラクター CHARACTER")
+	#copylightworks
+		.inner
+			.copylightworks__title
+				img(src="./images/copylightworks_title.png",alt="版権類作品たち COPYLIGHT WORKS")
+			ul.lists
+				- for (var i = 1; i < 37; i++) {
+				li.list
+					img(src='./images/copylightworks_thumbnail.jpg')
+				- }
 	.stamp
 		.title
 			img.text(src="")
