@@ -474,22 +474,6 @@ body {
 	background-color: #fff5eb;
 }
 
-body .block {
-	margin: 56px 0 0 0;
-}
-
-body:before {
-	content: "";
-	position: absolute;
-	display: block;
-	width: 100%;
-	height: 5000px;
-	background-image: url("../images/damii.jpg");
-	background-position: top center;
-	background-repeat: no-repeat;
-	opacity: 0.5;
-}
-
 body .inner {
 	width: 1000px;
 	margin: 0 auto;
@@ -519,6 +503,7 @@ body #mv .mv__title img.text {
 
 body #profile .block {
 	zoom: 1;
+	margin: 56px 0 0 0;
 }
 
 body #profile .block:after {
@@ -564,13 +549,72 @@ body #character {
 	margin-top: 177px;
 }
 
+body #character .block {
+	margin: 40px 0 0 0;
+	zoom: 1;
+}
+
+body #character .block:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 body #character .character__title {
 	text-align: center;
 	margin-left: 22px;
 }
 
+body #character .character__thumb {
+	float: left;
+}
+
+body #character .character__thumb .thumb__lists {
+	zoom: 1;
+	width: 360px;
+}
+
+body #character .character__thumb .thumb__lists:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body #character .character__thumb .thumb__lists .list {
+	width: 60px;
+	height: 60px;
+	margin: 0 7px 9px 0;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	background-color: #b81919;
+}
+
+body #character .character__thumb .thumb__lists .list .thumb {
+	position: absolute;
+	top: 0px;
+	display: block;
+}
+
+body #character .character__thumb .thumb__lists .list:nth-child(5n) {
+	margin: 0 0 9px 0;
+}
+
+body #character .character__detail {
+	float: right;
+	width: 600px;
+	height: 620px;
+}
+
+body #character .character__detail .slideshow {
+	height: 620px;
+}
+
 body #copylightworks {
-	margin-top: 757px;
+	margin-top: 94px;
 }
 
 body #copylightworks .copylightworks__title {

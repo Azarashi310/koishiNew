@@ -29,6 +29,8 @@ html(html="ja")
 		meta(property="og:type" content!="article")
 		meta(property="og:locale" content!="ja_JP")
 		link(rel="stylesheet" type="text/css" href="#{css}" media="all")
+		block js
+		block css
 	body
 		#main
 			block contents

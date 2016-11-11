@@ -26,15 +26,16 @@ module.exports =
 			log: false
 	concat:
 		lib:[
-
+			src + 'common/js/jquery_311.js',
+			src + 'common/js/slick.js'
 		]
 		filename: 'lib.js'
-		dest: dest + 'article/special/js/'
+		dest: dest + 'common//js/'
 	webpack:
 		src: src + '**/js/**'
 		dest: dest
 		entry:
-			"article/special/sharefile/js/shared":src+"article/special/sharefile/js/shared"
+			"js/index":src+"js/index"
 		output:
 			publicPath : dest
 			filename : "[name].min.js"

@@ -10,6 +10,12 @@ block meta
 	-var og_img = "";
 	-var dir_root = "./";
 	-var css = "./css/index.css";
+block js
+	script(rel="text/javascript",src="./common/js/lib.js")
+	script(rel="text/javascript",src="./js/index.min.js")
+block css
+	link(rel="stylesheet" type="text/css" href="./common/css/slick-theme.css" media="all")
+	link(rel="stylesheet" type="text/css" href="./common/css/slick.css" media="all")
 block contents
 	#mv
 		.mv__title
@@ -47,14 +53,14 @@ block contents
 					ul.thumb__lists
 						-for(var i = 1;i < 30;i++){
 							li.list
-								img(src="",alt="")
+								img.thumb(src="./images/thumbs/thumb_#{i}.png",alt="")
 						-}
 				.character__detail
-					ul.slideshow
+					ul.slideshow.slick
 						-for(var i = 1; i < 30; i++){
 							li.slide
 								.character
-									img(src="",alt="")
+									img(src="./images/detail/detail_#{i}.png",alt="")
 								.name
 									img(src="",alt="")
 								.description
