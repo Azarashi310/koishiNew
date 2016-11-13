@@ -653,3 +653,53 @@ body #copylightworks .lists .list:nth-child(9n) {
 	margin-right: 0;
 }
 
+#linestamp {
+	margin-top: 148px;
+}
+
+#linestamp .linestamp__title {
+	text-align: center;
+}
+
+#linestamp .linestamp__stamps {
+	margin-top: 38px;
+	text-align: center;
+}
+
+#linestamp .linestamp__linestore {
+	width: 612px;
+	margin: 27px auto 0 auto;
+}
+
+#linestamp .linestamp__linestore .button {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#linestamp .linestamp__linestore .or {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 8px;
+}
+
+#linestamp .linestamp__linestore .qr {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#twitter {
+	margin-top: 108px;
+}
+
+#twitter .twitter__title {
+	text-align: center;
+}
+
+#contact {
+	margin-top: 50px;
+}
+
+#contact .contact__title {
+	text-align: center;
+}
+
