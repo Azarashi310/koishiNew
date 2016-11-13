@@ -43,7 +43,7 @@ block contents
 							2016.04　個展「」<br>
 							2016.06　個展「PEEP」
 					.profile__autorimage
-						img(src="./images/autorimage.png")
+						img(src="./images/autorimage.png",alt="")
 		#character
 			.inner
 				.character__title
@@ -75,20 +75,31 @@ block contents
 				ul.lists
 					- for (var i = 1; i < 37; i++) {
 					li.list
-						img(src='./images/copylightworks_thumbnail.jpg')
+						img(src='./images/copylightworks_thumbnail.jpg',alt="")
 					- }
-		#stamp
-			.title
-				img.text(src="")
-			.stamps
-			.linestore
+		#linestamp
+			.inner
+				.linestamp__title
+					img(src="./images/line_title.png",alt="")
+				.linestamp__stamps
+					img(src="./images/line_stamps.png",alt="")
+				.linestamp__linestore
+					.button
+						a(href="")
+							img(src="./images/line_button.png",alt="")
+					.or
+						img(src="./images/line_or.png",alt="")
+					.qr
+						img(src="./images/line_qr.png",alt="")
 		#twitter
 			.inner
-				.title
+				.twitter__title
+					img(src="./images/twitter_title.png",alt="")
 		#contact
-			.title
-				img.text(src="")
-			.description
-				img.text(src="")
-			.mail
-				img.text(src="")
+			.inner
+				.contact__title
+					img(src="./images/contact_title.png",alt="")
+				.description
+					img(src="")
+				.mail
+					img(src="")
