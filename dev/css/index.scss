@@ -123,10 +123,33 @@ body{
 			float: right;
 			width: 600px;
 			height:620px;
+			position: relative;
+			.character__descriptionbg{
+				background-image: url(../images/character_descriptionbg.png);
+				background-repeat: no-repeat;
+				background-position: top center;
+				position: absolute;
+				bottom:0px;
+				width:600px;
+				height:130px;
+			}
 			.slideshow{
 				height:620px;
+				.slide{
+					position: relative;
+				}
 				.character{
 					
+				}
+				.description{
+					position: absolute;
+					bottom:-122px;
+					font-size:12px;
+					line-height:1.8;
+					width:590px;
+					.text{
+						padding:0 20px;
+					}
 				}
 			}
 		}

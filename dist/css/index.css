@@ -617,10 +617,37 @@ body #character .character__detail {
 	float: right;
 	width: 600px;
 	height: 620px;
+	position: relative;
+}
+
+body #character .character__detail .character__descriptionbg {
+	background-image: url(../images/character_descriptionbg.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	position: absolute;
+	bottom: 0px;
+	width: 600px;
+	height: 130px;
 }
 
 body #character .character__detail .slideshow {
 	height: 620px;
+}
+
+body #character .character__detail .slideshow .slide {
+	position: relative;
+}
+
+body #character .character__detail .slideshow .description {
+	position: absolute;
+	bottom: -122px;
+	font-size: 12px;
+	line-height: 1.8;
+	width: 590px;
+}
+
+body #character .character__detail .slideshow .description .text {
+	padding: 0 20px;
 }
 
 body #copylightworks {
