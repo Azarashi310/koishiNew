@@ -21,70 +21,73 @@ block contents
 		.mv__title
 			img.logo(src="./images/mv_chara.png",alt="")
 			img.text(src="./images/mv_title.png",alt="KOISHI")
-
-	#profile
-		.inner
-			h2.profile__title
-				img(src="./images/profile_title.png",alt="プロフィール PROFILE")
-			.block
-				.profile__baloon
-					p.intro.
-						福岡県出身、在住のイラストレーター。キャラクターデザインをメインに活動中。<br>
-						実在する国に住む、動物や架空の生物がモチーフのキャラクター作成が多い。
-					p.text.
-						2009.11　グループ展「あ、これ贈り物にしたいんで包んでください。」<br>
-						2010.03　グループ展「CROUCH START!」<br>
-						2011.03　グループ展「CROUCH START!2 GROW!」<br>
-						2011.05　COMIC CITY福岡26「House Dust」サークル参加<br>
-						2012.05　COMIC CITY福岡29「mingle」サークル参加<br>
-						2012.09　COMIC CITY福岡30「0102Works.」サークル参加<br>
-						2013.01　COMIC CITY福岡31「0102Works.」サークル参加<br>
-						2013.03　子どもの村 子どもプログラム　イラストの提供<br>
-						2016.04　個展「」<br>
-						2016.06　個展「PEEP」
-				.profile__autorimage
-					img(src="./images/autorimage.png")
-	#character
-		.inner
-			.character__title
-				img.text(src="./images/character_title.png",alt="キャラクター CHARACTER")
-			.block
-				.character__thumb
-					ul.thumb__lists
-						-for(var i = 1;i < 30;i++){
-							li.list
-								img.thumb(src="./images/thumbs/thumb_#{i}.png",alt="")
-						-}
-				.character__detail
-					ul.slideshow.slick
-						-for(var i = 1; i < 30; i++){
-							li.slide
-								.character
-									img(src="./images/detail/detail_#{i}.png",alt="")
-								.name
-									img(src="",alt="")
-								.description
-									p.text.
-										テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま
-						-}
-	#copylightworks
-		.inner
-			.copylightworks__title
-				img(src="./images/copylightworks_title.png",alt="版権類作品たち COPYLIGHT WORKS")
-			ul.lists
-				- for (var i = 1; i < 37; i++) {
-				li.list
-					img(src='./images/copylightworks_thumbnail.jpg')
-				- }
-	.stamp
-		.title
-			img.text(src="")
-		.stamps
-		.linestore
-	.contact
-		.title
-			img.text(src="")
-		.description
-			img.text(src="")
-		.mail
-			img.text(src="")
+	#contents
+		#profile
+			.inner
+				h2.profile__title
+					img(src="./images/profile_title.png",alt="プロフィール PROFILE")
+				.block
+					.profile__baloon
+						p.intro.
+							福岡県出身、在住のイラストレーター。キャラクターデザインをメインに活動中。<br>
+							実在する国に住む、動物や架空の生物がモチーフのキャラクター作成が多い。
+						p.text.
+							2009.11　グループ展「あ、これ贈り物にしたいんで包んでください。」<br>
+							2010.03　グループ展「CROUCH START!」<br>
+							2011.03　グループ展「CROUCH START!2 GROW!」<br>
+							2011.05　COMIC CITY福岡26「House Dust」サークル参加<br>
+							2012.05　COMIC CITY福岡29「mingle」サークル参加<br>
+							2012.09　COMIC CITY福岡30「0102Works.」サークル参加<br>
+							2013.01　COMIC CITY福岡31「0102Works.」サークル参加<br>
+							2013.03　子どもの村 子どもプログラム　イラストの提供<br>
+							2016.04　個展「」<br>
+							2016.06　個展「PEEP」
+					.profile__autorimage
+						img(src="./images/autorimage.png")
+		#character
+			.inner
+				.character__title
+					img.text(src="./images/character_title.png",alt="キャラクター CHARACTER")
+				.block
+					.character__thumb
+						ul.thumb__lists
+							-for(var i = 1;i < 30;i++){
+								li.list
+									img.thumb(src="./images/thumbs/thumb_#{i}.png",alt="")
+							-}
+					.character__detail
+						ul.slideshow.slick
+							-for(var i = 1; i < 30; i++){
+								li.slide
+									.character
+										img(src="./images/detail/detail_#{i}.png",alt="")
+									.name
+										img(src="",alt="")
+									.description
+										p.text.
+											テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま
+							-}
+		#copylightworks
+			.inner
+				.copylightworks__title
+					img(src="./images/copylightworks_title.png",alt="版権類作品たち COPYLIGHT WORKS")
+				ul.lists
+					- for (var i = 1; i < 37; i++) {
+					li.list
+						img(src='./images/copylightworks_thumbnail.jpg')
+					- }
+		#stamp
+			.title
+				img.text(src="")
+			.stamps
+			.linestore
+		#twitter
+			.inner
+				.title
+		#contact
+			.title
+				img.text(src="")
+			.description
+				img.text(src="")
+			.mail
+				img.text(src="")
