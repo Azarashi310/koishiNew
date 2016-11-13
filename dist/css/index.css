@@ -499,6 +499,14 @@ body #contents {
 	background-repeat: repeat-y;
 }
 
+body #profile {
+	margin-top: 113px;
+}
+
+body #profile .profile__title {
+	text-align: center;
+}
+
 body #profile .block {
 	zoom: 1;
 	margin: 56px 0 0 0;
@@ -536,11 +544,6 @@ body #profile .profile__autorimage {
 	float: left;
 	margin-top: 15px;
 	margin-left: 7px;
-}
-
-body #profile .profile__title {
-	text-align: center;
-	padding: 114px 0 0 0;
 }
 
 body #character {
