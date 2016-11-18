@@ -474,7 +474,7 @@ body .inner {
 body #mv {
 	background-image: url(../images/mv_bg.jpg);
 	background-position: top center;
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 }
 
 body #mv .mv__title {
@@ -496,7 +496,7 @@ body #mv .mv__title img.text {
 body #contents {
 	background-image: url(../images/bg_dots.png);
 	background-position: top center;
-	background-repeat: repeat-y;
+	background-repeat: repeat;
 }
 
 body #profile .block {
@@ -565,11 +565,14 @@ body #character .character__title {
 
 body #character .character__thumb {
 	float: left;
+	height: 620px;
+	overflow: scroll;
+	overflow-x: auto;
 }
 
 body #character .character__thumb .thumb__lists {
 	zoom: 1;
-	width: 360px;
+	width: 346px;
 }
 
 body #character .character__thumb .thumb__lists:after {
@@ -593,8 +596,26 @@ body #character .character__thumb .thumb__lists .list {
 
 body #character .character__thumb .thumb__lists .list .thumb {
 	position: absolute;
-	top: 0px;
+	top: 50%;
+	left: 50%;
+	margin: -104px 0 0 -148px;
 	display: block;
+	-webkit-transition-property: margin;
+	-o-transition-property: margin;
+	-moz-transition-property: margin;
+	transition-property: margin;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.19, 2.89, 0.48, -0.35);
+	-moz-transition-timing-function: cubic-bezier(0.19, 2.89, 0.48, -0.35);
+	-o-transition-timing-function: cubic-bezier(0.19, 2.89, 0.48, -0.35);
+	transition-timing-function: cubic-bezier(0.19, 2.89, 0.48, -0.35);
+}
+
+body #character .character__thumb .thumb__lists .list:hover .thumb {
+	margin-top: -114px;
 }
 
 body #character .character__thumb .thumb__lists .list:nth-child(5n) {
@@ -628,7 +649,7 @@ body #character .character__detail .slideshow .slide {
 
 body #character .character__detail .slideshow .description {
 	position: absolute;
-	bottom: -122px;
+	margin: 60px 0 0 0;
 	font-size: 12px;
 	line-height: 1.8;
 	width: 590px;
@@ -710,11 +731,123 @@ body #copylightworks .lists .list:nth-child(9n) {
 	text-align: center;
 }
 
+#twitter .twitter__detail {
+	zoom: 1;
+	margin: 39px 0 0 0;
+}
+
+#twitter .twitter__detail:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#twitter .twitter__detail .timeline {
+	float: right;
+	width: 696px;
+	height: 406px;
+	overflow: scroll;
+	overflow-x: hidden;
+	border: 2px solid #000;
+}
+
 #contact {
-	margin-top: 78px;
+	margin-top: 90px;
+	padding: 0 0 56px 0;
 }
 
 #contact .contact__title {
 	text-align: center;
+}
+
+#contact .contact__form {
+	width: 800px;
+	margin: 40px auto 0 auto;
+	background-image: url(../images/contact_form.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding: 0 0 36px 0;
+}
+
+#contact .contact__form .form__inner {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#contact .contact__form .subhead {
+	padding: 34px 0 0 0;
+}
+
+#contact .contact__form .name {
+	margin: 27px 0 0 0;
+}
+
+#contact .contact__form .name input {
+	display: block;
+	margin: 6px 0 0 0;
+	width: 680px;
+	height: 46px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: solid 2px #000;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+	padding: 0 0 0 16px;
+}
+
+#contact .contact__form .mailaddres {
+	margin: 20px 0 0 0;
+}
+
+#contact .contact__form .mailaddres .first {
+	display: block;
+	margin: 9px 0 0 0;
+	width: 680px;
+	height: 46px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: solid 2px #000;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+	padding: 0 0 0 16px;
+}
+
+#contact .contact__form .mailaddres .second {
+	display: block;
+	margin: 10px 0 0 0;
+	width: 680px;
+	height: 46px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: solid 2px #000;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+	padding: 0 0 0 16px;
+}
+
+#contact .contact__form .contactus {
+	margin: 22px 0 0 0;
+}
+
+#contact .contact__form .contactus input {
+	display: block;
+	margin: 7px 0 0 0;
+	width: 680px;
+	height: 46px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: solid 2px #000;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+	padding: 0 0 0 16px;
+}
+
+#contact .contact__form .submit {
+	text-align: center;
+	margin: 30px 0 0 0;
 }
 

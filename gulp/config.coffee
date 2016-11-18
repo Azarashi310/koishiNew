@@ -53,6 +53,6 @@ module.exports =
 	watch:
 		pass:
 			jade: src + '**/*.jade'
-			jade_tmp: src + '**/template/template.jade'
+			jade_tmp: src + '**/jade/_base.jade'
 			style: src + '**/*.scss'
 			webpack: src + '**/js/**'

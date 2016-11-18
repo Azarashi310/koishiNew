@@ -70,8 +70,8 @@
 	display: none;
 }
 
-[dir="rtl"] .slick-slide {
-	float: right;
+.slick-slide:focus {
+	outline: none;
 }
 
 .slick-slide img {

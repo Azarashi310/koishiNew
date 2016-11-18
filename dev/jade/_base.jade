@@ -29,10 +29,12 @@ html(html="ja")
 		meta(property="og:type" content!="article")
 		meta(property="og:locale" content!="ja_JP")
 		link(rel="stylesheet" type="text/css" href="#{css}" media="all")
+		link(rel="stylesheet" type="text/css" href="#{dir_root}common/css/common.css" media="all")
 		block js
 		block css
 	body
 		#main
 			block contents
-			.footter
-				img(src="#{dir_root}common/images/footer_text.png")
+		#footer
+			p.footer__text.
+				copyright (C) 2016 KOISHI. All rights reserved.

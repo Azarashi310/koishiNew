@@ -30,7 +30,7 @@ body{
 	#mv{
 		background-image: url(../images/mv_bg.jpg);
 		background-position: top center;
-		background-repeat: no-repeat;
+		background-repeat: repeat-x;
 		.mv__title{
 			text-align: center;
 			display: block;
@@ -48,7 +48,7 @@ body{
 	#contents{
 		background-image: url(../images/bg_dots.png);
 		background-position: top center;
-		background-repeat: repeat-y;
+		background-repeat: repeat;
 	}
 	#profile{
 		.block{
@@ -96,9 +96,12 @@ body{
 		}
 		.character__thumb{
 			float: left;
+			height:620px;
+			overflow: scroll;
+			overflow-x: auto;
 			.thumb__lists{
 				@include clearfix();
-				width:360px;
+				width:346px;
 				.list{
 					width:60px;
 					height:60px;
@@ -110,8 +113,19 @@ body{
 					background-color: #b81919;
 					.thumb{
 						position: absolute;
-						top:0px;
+						top:50%;
+						left:50%;
+						margin:-104px 0 0 -148px;
 						display: block;
+						transition-property: margin;
+						transition-duration: 0.3s;
+						transition-timing-function:cubic-bezier(.19,2.89,.48,-0.35);
+					}
+					&:hover{
+						//overflow-y: visible;
+						.thumb{
+							margin-top:-114px;
+						}
 					}
 					&:nth-child(5n){
 						margin:0 0 9px 0;
@@ -143,7 +157,7 @@ body{
 				}
 				.description{
 					position: absolute;
-					bottom:-122px;
+					margin:60px 0 0 0;
 					font-size:12px;
 					line-height:1.8;
 					width:590px;
@@ -211,11 +225,96 @@ body{
 		.twitter__title{
 			text-align: center;
 		}
+		.twitter__detail{
+			@include clearfix();
+			margin:39px 0 0 0;
+			.timeline{
+				float: right;
+				width:696px;
+				height:406px;
+				overflow: scroll;
+				overflow-x: hidden;
+				border: 2px solid #000;
+			}
+		}
 	}
 	#contact{
-		margin-top: 78px;
+		margin-top: 90px;
+		padding: 0 0 56px 0;
 		.contact__title{
 			text-align: center;
+		}
+		.contact__form{
+			width:800px;
+			margin: 40px auto 0 auto;
+			background-image: url(../images/contact_form.png);
+			background-position: top center;
+			background-repeat: no-repeat;
+			padding: 0 0 36px 0;
+			.form__inner{
+				width: 700px;
+				margin:0 auto;
+			}
+			.subhead{
+				padding:34px 0 0 0;
+			}
+			.name{
+				margin:27px 0 0 0;
+				input{
+					display: block;
+					margin:6px 0 0 0;
+					width:680px;
+					height:46px;
+					border-radius: 5px;
+					border:solid 2px #000;
+					color: rgba(0, 0, 0, 0.3);
+					font-size:14px;
+					padding:0 0 0 16px;
+				}
+			}
+			.mailaddres{
+				margin:20px 0 0 0;
+				.first{
+					display: block;
+					margin:9px 0 0 0;
+					width:680px;
+					height:46px;
+					border-radius: 5px;
+					border:solid 2px #000;
+					color: rgba(0, 0, 0, 0.3);
+					font-size:14px;
+					padding:0 0 0 16px;
+				}
+				.second{
+					display: block;
+					margin:10px 0 0 0;
+					width:680px;
+					height:46px;
+					border-radius: 5px;
+					border:solid 2px #000;
+					color: rgba(0, 0, 0, 0.3);
+					font-size:14px;
+					padding:0 0 0 16px;
+				}
+			}
+			.contactus{
+				margin:22px 0 0 0;
+				input{
+					display: block;
+					margin:7px 0 0 0;
+					width:680px;
+					height:46px;
+					border-radius: 5px;
+					border:solid 2px #000;
+					color: rgba(0, 0, 0, 0.3);
+					font-size:14px;
+					padding:0 0 0 16px;
+				}
+			}
+			.submit{
+				text-align: center;
+				margin:30px 0 0 0;
+			}
 		}
 	}
 
