@@ -5,9 +5,9 @@ class BackGroundAnimetion
 		@bgposy = 0
 	init:() ->
 		_this = @
-		setInterval(()->
-			_this.animetion()
-		,100)
+#		setInterval(()->
+#			_this.animetion()
+#		,100)
 	animetion:()->
 		@bgposx -= 0.1
 		@bgposy -= 0.1

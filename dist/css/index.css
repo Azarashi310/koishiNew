@@ -760,12 +760,12 @@ body #copylightworks .lists .list:nth-child(9n) {
 }
 
 #twitter .twitter__detail .timeline {
-	float: right;
 	width: 696px;
 	height: 406px;
 	overflow: scroll;
 	overflow-x: hidden;
 	border: 2px solid #000;
+	margin: 0 auto;
 }
 
 #contact {
