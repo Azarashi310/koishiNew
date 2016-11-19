@@ -55,4 +55,4 @@ module.exports =
 			jade: src + '**/*.jade'
 			jade_tmp: src + '**/jade/_base.jade'
 			style: src + '**/*.scss'
-			webpack: src + '**/js/**'
+			webpack: src + '**/js/**/*.coffee'

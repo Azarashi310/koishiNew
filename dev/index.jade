@@ -52,8 +52,13 @@ block contents
 					.character__thumb
 						ul.thumb__lists.slick-dots
 							-for(var i = 1;i < 48;i++){
-								li.list
-									img.thumb(src="./images/thumbs/thumb_#{i}.png",alt="")
+								-if(i == 1){
+									li.list.active
+										img.thumb(src="./images/thumbs/thumb_#{i}.png",alt="")
+								-}else{
+									li.list
+										img.thumb(src="./images/thumbs/thumb_#{i}.png",alt="")
+								-}
 							-}
 					.character__detail
 						.character__descriptionbg

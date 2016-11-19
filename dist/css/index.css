@@ -500,7 +500,7 @@ body #contents {
 }
 
 body #profile {
-	margin-top: 113px;
+	padding-top: 113px;
 }
 
 body #profile .profile__title {
@@ -595,6 +595,7 @@ body #character .character__thumb .thumb__lists .list {
 	position: relative;
 	display: inline-block;
 	background-color: #b81919;
+	opacity: 0.5;
 }
 
 body #character .character__thumb .thumb__lists .list .thumb {
@@ -615,6 +616,18 @@ body #character .character__thumb .thumb__lists .list .thumb {
 	-moz-transition-timing-function: cubic-bezier(0.19, 2.89, 0.48, -0.35);
 	-o-transition-timing-function: cubic-bezier(0.19, 2.89, 0.48, -0.35);
 	transition-timing-function: cubic-bezier(0.19, 2.89, 0.48, -0.35);
+}
+
+body #character .character__thumb .thumb__lists .list.active {
+	opacity: 1;
+}
+
+body #character .character__thumb .thumb__lists .list.active .thumb {
+	margin-top: -114px;
+}
+
+body #character .character__thumb .thumb__lists .list:hover {
+	opacity: 1;
 }
 
 body #character .character__thumb .thumb__lists .list:hover .thumb {

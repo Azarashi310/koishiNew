@@ -14,5 +14,13 @@ class Slick
 	dotclick: (e) ->
 		_this = e.data;
 		index = _this.dot.index(@)
+		_this.resetActive()
+		$(_this.dot[index]).addClass('active')
 		_this.slider.slick 'slickGoTo',parseInt(index)
+	resetActive: () ->
+		i = 0
+		while i < @dot.length
+			if $(@dot[i]).hasClass('active')
+				$(@dot[i]).removeClass('active')
+			i++
 module.exports = Slick
