@@ -15,6 +15,7 @@ block js
 	script(rel="text/javascript",src="./js/index.min.js")
 block css
 	link(rel="stylesheet" type="text/css" href="./common/css/slick-theme.css" media="all")
+	link(rel="stylesheet" type="text/css" href="./common/css/jquery.fancybox.css" media="all")
 	link(rel="stylesheet" type="text/css" href="./common/css/slick.css" media="all")
 block contents
 	#mv
@@ -50,7 +51,7 @@ block contents
 					img.text(src="./images/character_title.png",alt="キャラクター CHARACTER")
 				.block
 					.character__thumb
-						ul.thumb__lists.slick-dots
+						ul.thumb__lists.slick-dots.modalthumb
 							-for(var i = 1;i < 48;i++){
 								-if(i == 1){
 									li.list.active
@@ -124,11 +125,20 @@ block contents
 			.inner
 				.copylightworks__title
 					img(src="./images/copylightworks_title.png",alt="版権類作品たち COPYLIGHT WORKS")
-				ul.lists
+				ul.lists.slick-dots
 					- for (var i = 1; i < 37; i++) {
 					li.list
 						img(src='./images/copylightworks_thumbnail.jpg',alt="")
 					- }
+				.modal
+					.modalinner
+						.closebutton
+							img(src="./images/modal_slideshow_close.png",alt="✕")
+					ul.lists.slick
+						- for (var i = 1; i < 37; i++) {
+						li.list
+							img(src='./images/copylightworks_slideimg_1.jpg',alt="")
+						- }
 		#linestamp
 			.inner
 				.linestamp__title

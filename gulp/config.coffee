@@ -26,7 +26,7 @@ module.exports =
 			log: false
 	concat:
 		lib:[
-			src + 'common/js/jquery_311.js',
+			src + 'common/js/jquery-1.12.4.min.js',
 			src + 'common/js/slick.js'
 		]
 		filename: 'lib.js'
