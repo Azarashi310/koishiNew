@@ -10,7 +10,7 @@ module.exports =
 	jade:
 		src: [
 			src + '**/*.jade',
-			'!' + src + '**/template/**.jade'
+			'!' + src + '**/jade/*.jade'
 		]
 		dest: dest
 		opt:
