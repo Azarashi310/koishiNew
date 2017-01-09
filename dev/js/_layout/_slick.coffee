@@ -5,8 +5,9 @@ class Slick
 		@dots = dots
 		@dot = $(@dots[0]).find('.list')
 		@modalDot = $(@dots[1]).find('.list')
+		@sliderArrowPrev = $(@slider).find('.slick-prev')
+		@sliderArrowNext = $(@slider).find('.slick-next')
 	init: () ->
-		console.log $(@modalSlider)
 		@slider.slick({
 			cssEase:'ease',
 			speed:500,
@@ -27,8 +28,11 @@ class Slick
 		})
 		@dot.on 'click',this,@dotclick
 		@modalDot.on 'click',this,@dotclick
+		@sliderArrowPrev.on 'click',this,@arrowClick
+		@sliderArrowNext.on 'click',this,@arrowClick
 	dotclick: (e) ->
-		_this = e.data;
+		_this = e.data
+		#親にcopyrightworksを持つスライダーならば
 		if $(@).parents('#copylightworks').length
 			_this.modalSlider.slick 'slickGoTo',parseInt(index)
 		else
@@ -36,7 +40,9 @@ class Slick
 			_this.resetActive()
 			$(_this.dot[index]).addClass('active')
 			_this.slider.slick 'slickGoTo',parseInt(index)
-
+	arrowClick: (e) ->
+		_this = e.data
+		console.log 'aaa'
 	resetActive: () ->
 		i = 0
 		while i < @dot.length
