@@ -99,7 +99,7 @@ block contents
 					img.text(src="./images/character_title.png",alt="キャラクター CHARACTER")
 				.block
 					.character__thumb
-						ul.thumb__lists.slick-dots.modalthumb
+						ul.thumb__lists.slick-dots
 							-for(var i = 1;i < 48;i++){
 								-if(i == 1){
 									li.list.active
@@ -173,22 +173,24 @@ block contents
 
 		#copylightworks
 			.inner
+				-var copylightCount = 24;
 				.copylightworks__title
 					img(src="./images/copylightworks_title.png",alt="版権類作品たち COPYLIGHT WORKS")
 				ul.lists.slick-dots
-					- for (var i = 1; i < 37; i++) {
+					- for (var i = 1; i <= copylightCount; i++) {
 					li.list
-						img(src='./images/copylightworks_thumbnail.jpg',alt="")
+						img(src='./images/copylightworks/thumbs/copylightworks_thumbnail_'+i+'.png',alt="")
 					- }
 				.modal
 					.modalinner
 						.closebutton
 							img(src="./images/modal_slideshow_close.png",alt="✕")
 					ul.lists.slick
-						- for (var i = 1; i < 37; i++) {
+						- for (var i = 1; i <= copylightCount; i++) {
 						li.list
-							img(src='./images/copylightworks_slideimg_1.jpg',alt="")
+							img(src='./images/copylightworks/detail/copylightworks_slideimg_'+i+'.png',alt="")
 						- }
+
 		#linestamp
 			.inner
 				.linestamp__title

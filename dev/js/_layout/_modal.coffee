@@ -18,7 +18,6 @@ class Modal
 		_this.setmargin()
 	showModal:(e) ->
 		_this = e.data
-		console.log 'aaa'
 		_this.modal.css('display','block')
 	closebuttonClick:(e) ->
 		_this = e.data
