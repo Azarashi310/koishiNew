@@ -690,29 +690,29 @@ body #copylightworks .copylightworks__title {
 	text-align: center;
 }
 
-body #copylightworks .lists {
+body #copylightworks .slick-dots {
 	margin-top: 58px;
 	zoom: 1;
 }
 
-body #copylightworks .lists:after {
+body #copylightworks .slick-dots:after {
 	content: "";
 	display: block;
 	clear: both;
 }
 
-body #copylightworks .lists .list {
+body #copylightworks .slick-dots .list {
 	margin-right: 12px;
 	margin-bottom: 10px;
 	font-size: 0;
 	float: left;
 }
 
-body #copylightworks .lists .list:nth-child(9n) {
+body #copylightworks .slick-dots .list:nth-child(9n) {
 	margin-right: 0;
 }
 
-body #copylightworks .lists .list:hover {
+body #copylightworks .slick-dots .list:hover {
 	opacity: 0.8;
 }
 
@@ -754,11 +754,15 @@ body #copylightworks .modal .modalinner .closebutton {
 }
 
 body #copylightworks .modal .lists {
-	width: 500px;
-	height: 450px;
+	width: 660px;
+	height: 430px;
 	margin: 0 auto;
 	position: relative;
 	z-index: 1;
+}
+
+body #copylightworks .modal .list {
+	margin: 0 60px;
 }
 
 body #copylightworks .modal .list:hover {
