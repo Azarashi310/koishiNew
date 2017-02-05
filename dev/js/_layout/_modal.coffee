@@ -1,6 +1,7 @@
 class Modal
 	constructor:(modal) ->
 		@modal = modal
+		@modalBG = @modal.find('.modalBG')
 		@mainHeight
 		@listsHeight
 		@lists = $('.modal .lists')
@@ -12,6 +13,7 @@ class Modal
 		@setmargin()
 		$(window).resize this,@resizeEvent
 		@closebutton.on 'click',this,@closebuttonClick
+		@modalBG.on 'click',this,@closebuttonClick
 		@list.on 'click',this,@showModal
 	resizeEvent:(e) ->
 		_this = e.data
