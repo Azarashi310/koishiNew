@@ -1,16 +1,16 @@
 class BackGroundAnimetion
 	constructor: () ->
 		@bg = $('body')
-		@bgposx = 50
-		@bgposy = 0
+		@bgposx =-1257
+		@bgposy = 4240
+		@timeline
+		@masterTimeline
 	init:() ->
-		_this = @
-#		setInterval(()->
-#			_this.animetion()
-#		,100)
-	animetion:()->
-		@bgposx -= 0.1
-		@bgposy -= 0.1
-		@bg.css('background-position-x',@bgposx+'%')
-		@bg.css('background-position-y',@bgposy+'%')
+		TweenMax.ticker.fps(15)
+		TweenMax.to @bg,120,{
+			backgroundPosition:@bgposx+'px '+@bgposy+'px',
+			repeat:-1,
+			ease:Linear.easeNone
+		}
+
 module.exports = BackGroundAnimetion

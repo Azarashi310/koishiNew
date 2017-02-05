@@ -8,5 +8,6 @@ $ ->
 	modalSlick.init(true);
 	bgAnimetion = new BackGroundAnimetion()
 	bgAnimetion.init()
+#	bgAnimetion.animetion()
 #	modal = new Modal($('.modal'))
 #	modal.init()

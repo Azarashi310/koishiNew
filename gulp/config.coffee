@@ -27,7 +27,9 @@ module.exports =
 	concat:
 		lib:[
 			src + 'common/js/jquery-1.12.4.min.js',
-			src + 'common/js/slick.js'
+			src + 'common/js/slick.js',
+			src + 'common/js/TweenMax.min.js',
+			src + 'common/js/TimelineMax.min.js'
 		]
 		filename: 'lib.js'
 		dest: dest + 'common//js/'
