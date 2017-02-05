@@ -728,10 +728,37 @@ body #copylightworks .modal {
 	display: block;
 }
 
+body #copylightworks .modal .modalBG {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+body #copylightworks .modal .modalinner {
+	position: absolute;
+	width: 1000px;
+	height: 450px;
+	left: 50%;
+	top: 50%;
+	margin: -225px 0 0 -500px;
+	z-index: 0;
+}
+
+body #copylightworks .modal .modalinner .closebutton {
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
 body #copylightworks .modal .lists {
 	width: 500px;
 	height: 450px;
 	margin: 0 auto;
+	position: relative;
+	z-index: 1;
 }
 
 body #copylightworks .modal .list:hover {
@@ -744,22 +771,6 @@ body #copylightworks .modal .slick-list {
 
 body #copylightworks .modal .slick-track {
 	overflow: hidden;
-}
-
-body #copylightworks .modal .modalinner {
-	position: absolute;
-	width: 1000px;
-	height: 450px;
-	left: 50%;
-	top: 50%;
-	margin: -225px 0 0 -500px;
-}
-
-body #copylightworks .modal .closebutton {
-	position: absolute;
-	cursor: pointer;
-	right: 0;
-	top: 0;
 }
 
 body #copylightworks .modal .slick-prev {

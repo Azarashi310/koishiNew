@@ -1,25 +1,40 @@
 class Modal
-	constructor:(modal) ->
+	constructor:(modal,fixElement) ->
 		@modal = modal
+		@modalBG = @modal.find('.modalBG')
+		@contents = fixElement
 		@mainHeight
 		@listsHeight
 		@lists = $('.modal .lists')
 		@list = $('#copylightworks .lists .list')
 		@closebutton = @modal.find('.closebutton')
+		@currentScrollPoint = 0
+
 	init:() ->
 		@mainHeight = window.innerHeight
 		@listsHeight = @lists.innerHeight()
 		@setmargin()
 		$(window).resize this,@resizeEvent
 		@closebutton.on 'click',this,@closebuttonClick
+		@modalBG.on 'click',this,@closebuttonClick
 		@list.on 'click',this,@showModal
 	resizeEvent:(e) ->
 		_this = e.data
 		_this.setmargin()
 	showModal:() ->
+		@currentScrollPoint = $(window).scrollTop()
+		$(@contents).css({
+			position:'fixed',
+			width:'100%',
+			top:-1*@currentScrollPoint
+		})
 		$(@modal).css({'opacity':1,'z-index':2})
 	closebuttonClick:(e) ->
 		_this = e.data
+		_this.contents.attr({style:''})
+		$('html,body').prop({
+			scrollTop:_this.currentScrollPoint
+		})
 		_this.modal.css({'opacity':0,'z-index':-1})
 	setmargin:() ->
 		@mainHeight = window.innerHeight
