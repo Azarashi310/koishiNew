@@ -10,12 +10,17 @@ class Slick
 		@modal
 		@modalFlag = false
 	init: (modalFlag) ->
+		easekind = ''
+		sliderSpeed = 0
+		centerPd = ''
 		if modalFlag
 			easekind = 'none'
 			sliderSpeed = 0
+			centerPd = '60px'
 		else
 			easekind = 'ease'
 			sliderSpeed = 500
+			centerPd = '50px'
 		@slider.slick({
 			cssEase:easekind,
 			speed:sliderSpeed,
@@ -23,6 +28,7 @@ class Slick
 			dots:false,
 			variableWidth:true,
 			centerMode:true,
+			centerPadding:centerPd
 			slidesToShow:1
 		})
 		if modalFlag
