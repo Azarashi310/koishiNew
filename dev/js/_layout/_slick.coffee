@@ -27,7 +27,7 @@ class Slick
 		})
 		if modalFlag
 			@modalFlag = true
-			@modal = new Modal($('.modal'))
+			@modal = new Modal($('.modal'),$('#main'))
 			@modal.init()
 		@dot.on 'click',this,@dotclick
 		@sliderArrowPrev.on 'click',this,@arrowClick
