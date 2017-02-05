@@ -1,3 +1,5 @@
+Modal = require('./_modal')
+
 class Slick
 	constructor: (slider,dots) ->
 		@slider = slider
@@ -5,16 +7,28 @@ class Slick
 		@dot = $(@dots[0]).find('.list')
 		@sliderArrowPrev = $(@slider).find('.slick-prev')
 		@sliderArrowNext = $(@slider).find('.slick-next')
-	init: () ->
+		@modal
+		@modalFlag = false
+	init: (modalFlag) ->
+		if modalFlag
+			easekind = 'none'
+			sliderSpeed = 0
+		else
+			easekind = 'ease'
+			sliderSpeed = 500
 		@slider.slick({
-			cssEase:'ease',
-			speed:500,
+			cssEase:easekind,
+			speed:sliderSpeed,
 			draggable:false,
 			dots:false,
 			variableWidth:true,
 			centerMode:true,
 			slidesToShow:1
 		})
+		if modalFlag
+			@modalFlag = true
+			@modal = new Modal($('.modal'))
+			@modal.init()
 		@dot.on 'click',this,@dotclick
 		@sliderArrowPrev.on 'click',this,@arrowClick
 		@sliderArrowNext.on 'click',this,@arrowClick
@@ -24,6 +38,8 @@ class Slick
 		_this.resetActive()
 		$(_this.dot[index]).addClass('active')
 		_this.slider.slick 'slickGoTo',parseInt(index)
+		if _this.modalFlag
+			_this.modal.showModal()
 	arrowClick: (e) ->
 		_this = e.data
 		console.log 'aaa'

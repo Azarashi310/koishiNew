@@ -16,12 +16,11 @@ class Modal
 	resizeEvent:(e) ->
 		_this = e.data
 		_this.setmargin()
-	showModal:(e) ->
-		_this = e.data
-		_this.modal.css('display','block')
+	showModal:() ->
+		$(@modal).css({'opacity':1,'z-index':2})
 	closebuttonClick:(e) ->
 		_this = e.data
-		_this.modal.css('display','none')
+		_this.modal.css({'opacity':0,'z-index':-1})
 	setmargin:() ->
 		@mainHeight = window.innerHeight
 		@lists.css('margin',((@mainHeight - @listsHeight)/2)+'px auto')

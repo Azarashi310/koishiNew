@@ -210,7 +210,9 @@ body{
 			position: fixed;
 			top:0;
 			left:0;
-			display: none;
+			opacity:0;
+			z-index:-1;
+			display: block;
 			.lists{
 				width:500px;
 				height:450px;
