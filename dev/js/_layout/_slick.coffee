@@ -5,11 +5,13 @@ class Slick
 		@slider = slider
 		@dots = dots
 		@dot = $(@dots[0]).find('.list')
-		@sliderArrowPrev = $(@slider).find('.slick-prev')
-		@sliderArrowNext = $(@slider).find('.slick-next')
+#		@sliderArrowPrev = $(@slider).find('.slick-prev')
+		@sliderArrowPrev = $('.character__detail .slick .slick-prev')
+		@sliderArrowNext = $('.character__detail .slick .slick-next')
 		@modal
 		@modalFlag = false
 	init: (modalFlag) ->
+		console.log @sliderArrowPrev
 		easekind = ''
 		sliderSpeed = 0
 		centerPd = ''
@@ -48,7 +50,30 @@ class Slick
 			_this.modal.showModal()
 	arrowClick: (e) ->
 		_this = e.data
-		console.log 'aaa'
+		if $(@).hasClass('slick-prev')
+			_this.changeDot(false)
+		else
+			_this.changeDot(true)
+	# prevOrNext false なら prev true なら next
+	changeDot:(prevOrNext) ->
+		i = 0
+		while i < @dot.length
+			console.log @dot[i]
+			if $(@dot[i]).hasClass('active')
+				console.log 'act'
+				if prevOrNext
+					if i == @dot.length - 1
+						$(@dot[0]).addClass('active')
+					else
+						$(@dot[i + 1]).addClass('active')
+					$(@dot[i]).removeClass('active')
+				else
+					if i == 0
+						$(@dot[@dot.length - 1]).addClass('active')
+					else
+						$(@dot[i - 1]).addClass('active')
+					$(@dot[i]).removeClass('active')
+			i++
 	resetActive: () ->
 		i = 0
 		while i < @dot.length
