@@ -7,24 +7,27 @@ class Slick
 		@dot = $(@dots[0]).find('.list')
 		@$sliderDots = $('.character__thumb .list')
 		@characterSliderCurrent = 0
-#		@sliderArrowPrev = $(@slider).find('.slick-prev')
 		@sliderArrowPrev = $('.character__detail .slick .slick-prev')
 		@sliderArrowNext = $('.character__detail .slick .slick-next')
 		@modal
 		@modalFlag = false
+		@slider.on 'afterChange' , @ , @movedSlider
+		@allowSliderButtonClick = true
 	init: (modalFlag) ->
-		console.log @sliderArrowPrev
 		easekind = ''
 		sliderSpeed = 0
 		centerPd = ''
+		accessibilityFlag = true
 		if modalFlag
 			easekind = 'none'
 			sliderSpeed = 0
 			centerPd = '60px'
+			accessibilityFlag = true
 		else
 			easekind = 'ease'
 			sliderSpeed = 500
 			centerPd = '50px'
+			accessibilityFlag = false
 		@slider.slick({
 			cssEase:easekind,
 			speed:sliderSpeed,
@@ -42,9 +45,15 @@ class Slick
 		@dot.on 'click',this,@dotclick
 		@sliderArrowPrev.on 'click',this,@arrowClick
 		@sliderArrowNext.on 'click',this,@arrowClick
+	movedSlider: (e) ->
+		_this = e.data
+		console.log 'movedSliderEvent : ',_this.allowSliderButtonClick
+		_this.allowSliderButtonClick = true
 	dotclick: (e) ->
 		_this = e.data
 		index = _this.dot.index(@)
+		_this.characterSliderCurrent = index
+		console.log _this.characterSliderCurrent
 		_this.resetActive()
 		$(_this.dot[index]).addClass('active')
 		_this.slider.slick 'slickGoTo',parseInt(index)
@@ -52,34 +61,35 @@ class Slick
 			_this.modal.showModal()
 	arrowClick: (e) ->
 		_this = e.data
-		if $(@).hasClass('slick-prev')
-			console.log 'prev'
-			_this.changeDot(false)
+		console.log 'arrowClickEvent : ',_this.allowSliderButtonClick
+		if _this.allowSliderButtonClick
+#			_this.allowSliderButtonClick = false
+			if $(@).hasClass('slick-prev')
+				console.log 'prev'
+				_this.changeDot(false)
+			else
+				console.log 'next'
+				_this.changeDot(true)
 		else
-			console.log 'next'
-			_this.changeDot(true)
+			return false
 	# prevOrNext false なら prev true なら next
 	changeDot:(prevOrNext) ->
+		@resetActive()
 		console.log @characterSliderCurrent
-		@$sliderDots.removeClass('active')
 		if prevOrNext
 			if @characterSliderCurrent == @$sliderDots.length - 1
-				@$sliderDots[0].addClass('current')
+				$(@$sliderDots[0]).addClass('active')
 				@characterSliderCurrent = 0
 			else
-				@$sliderDots[@characterSliderCurrent + 1].addClass('current')
+				$(@$sliderDots[@characterSliderCurrent + 1]).addClass('active')
 				@characterSliderCurrent++
 		else
 			if @characterSliderCurrent == 0
-				@$sliderDots[@$sliderDots.length - 1].addClass('current')
+				$(@$sliderDots[@$sliderDots.length - 1]).addClass('active')
 				@characterSliderCurrent = @$sliderDots.length - 1
 			else
-				@$sliderDots[@characterSliderCurrent - 1].addClass('current')
+				$(@$sliderDots[@characterSliderCurrent - 1]).addClass('active')
 				@characterSliderCurrent--
 	resetActive: () ->
-		i = 0
-		while i < @dot.length
-			if $(@dot[i]).hasClass('active')
-				$(@dot[i]).removeClass('active')
-			i++
+		@$sliderDots.removeClass('active')
 module.exports = Slick
