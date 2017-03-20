@@ -1,5 +1,5 @@
 Slick = require('./_layout/_slick')
-
+TwitterLayout = require('./_layout/_twitterLayout')
 BackGroundAnimetion = require('./_animetion/backgroundAnimetion')
 $ ->
 	characterSlick = new Slick($('.character__detail .slick'),$('.slick-dots'))
@@ -9,5 +9,8 @@ $ ->
 #	bgAnimetion = new BackGroundAnimetion()
 #	bgAnimetion.init()
 #	bgAnimetion.animetion()
-	modal = new Modal($('.modal'))
-	modal.init()
+	$(window).load(->
+		console.log 'windowLoad'
+		twitterLayout = new TwitterLayout()
+		twitterLayout.init()
+	)
