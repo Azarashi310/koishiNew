@@ -5,6 +5,8 @@ class Slick
 		@slider = slider
 		@dots = dots
 		@dot = $(@dots[0]).find('.list')
+		@$sliderDots = $('.character__thumb .list')
+		@characterSliderCurrent = 0
 #		@sliderArrowPrev = $(@slider).find('.slick-prev')
 		@sliderArrowPrev = $('.character__detail .slick .slick-prev')
 		@sliderArrowNext = $('.character__detail .slick .slick-next')
@@ -51,29 +53,29 @@ class Slick
 	arrowClick: (e) ->
 		_this = e.data
 		if $(@).hasClass('slick-prev')
+			console.log 'prev'
 			_this.changeDot(false)
 		else
+			console.log 'next'
 			_this.changeDot(true)
 	# prevOrNext false なら prev true なら next
 	changeDot:(prevOrNext) ->
-		i = 0
-		while i < @dot.length
-			console.log @dot[i]
-			if $(@dot[i]).hasClass('active')
-				console.log 'act'
-				if prevOrNext
-					if i == @dot.length - 1
-						$(@dot[0]).addClass('active')
-					else
-						$(@dot[i + 1]).addClass('active')
-					$(@dot[i]).removeClass('active')
-				else
-					if i == 0
-						$(@dot[@dot.length - 1]).addClass('active')
-					else
-						$(@dot[i - 1]).addClass('active')
-					$(@dot[i]).removeClass('active')
-			i++
+		console.log @characterSliderCurrent
+		@$sliderDots.removeClass('active')
+		if prevOrNext
+			if @characterSliderCurrent == @$sliderDots.length - 1
+				@$sliderDots[0].addClass('current')
+				@characterSliderCurrent = 0
+			else
+				@$sliderDots[@characterSliderCurrent + 1].addClass('current')
+				@characterSliderCurrent++
+		else
+			if @characterSliderCurrent == 0
+				@$sliderDots[@$sliderDots.length - 1].addClass('current')
+				@characterSliderCurrent = @$sliderDots.length - 1
+			else
+				@$sliderDots[@characterSliderCurrent - 1].addClass('current')
+				@characterSliderCurrent--
 	resetActive: () ->
 		i = 0
 		while i < @dot.length

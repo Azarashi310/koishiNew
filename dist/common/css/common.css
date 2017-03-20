@@ -1,13 +1,15 @@
 #footer {
-	background-color: #191919;
-	width: 100%;
-	height: 50px;
-}
-
-#footer .footer__text {
-	text-align: center;
-	line-height: 50px;
-	color: #fff;
-	font-size: 12px;
-}
-
+  background-color: #191919;
+  width: 100%;
+  height: 50px;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out; }
+  #footer:hover {
+    background-color: #ffffff; }
+  #footer .footer__text {
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 12px; }

@@ -12,7 +12,7 @@ gulp.task 'style', ->
 	)
 	.pipe( $.cached('style') )
 	.pipe( $.autoprefixer( config.style.autoprefixer_opt ) )
-	.pipe( $.combineMediaQueries( config.style.cmq_opt ) )
+	#.pipe( $.combineMediaQueries( config.style.cmq_opt ) )
 	#.pipe( $.sourcemaps.write() )
 # .on('error', handleErrors)
 	.pipe( gulp.dest(config.style.dest) )
