@@ -198,7 +198,11 @@ block contents
 				.linestamp__title
 					img(src="./images/line_title.png",alt="オリジナル LINEスタンプ LINE STAMP")
 				.linestamp__stamps
-					img(src="./images/line_stamps.png",alt="")
+					ul.stampList
+						-for(var i = 1; i < 30; i++){
+							li.stamp(class="stamp"+i)
+								img(src="./images/stamps/stamp" + i + '.png',alt="")
+						-}
 				.linestamp__linestore
 					.button
 						a(href="https://store.line.me/stickershop/product/1165896/ja",target="_blank")

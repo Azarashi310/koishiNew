@@ -824,6 +824,165 @@ body #copylightworks .modal .slick-next:before {
 #linestamp .linestamp__stamps {
 	margin-top: 38px;
 	text-align: center;
+	position: relative;
+	height: 433px;
+}
+
+#linestamp .linestamp__stamps .stampList {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1000px;
+	height: 433px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp {
+	position: absolute;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp1 {
+	top: 10px;
+	left: 50px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp2 {
+	top: 54px;
+	left: 240px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp3 {
+	top: 24px;
+	left: 332px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp4 {
+	top: 44px;
+	left: 471px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp5 {
+	top: 124px;
+	left: 514px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp6 {
+	top: 120px;
+	left: 410px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp7 {
+	top: 40px;
+	left: 164px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp8 {
+	top: 98px;
+	left: 8px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp9 {
+	top: 206px;
+	left: 384px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp10 {
+	top: 130px;
+	left: 172px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp11 {
+	top: 0px;
+	left: 710px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp12 {
+	top: 236px;
+	left: 282px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp13 {
+	top: 264px;
+	left: 80px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp14 {
+	top: 134px;
+	left: 302px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp15 {
+	top: 334px;
+	left: 150px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp16 {
+	top: 320px;
+	left: 266px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp17 {
+	top: 340px;
+	left: 24px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp18 {
+	top: 72px;
+	left: 890px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp19 {
+	top: 162px;
+	left: 798px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp20 {
+	top: 284px;
+	left: 757px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp21 {
+	top: 48px;
+	left: 594px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp22 {
+	top: 154px;
+	left: 616px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp23 {
+	top: 232px;
+	left: 182px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp24 {
+	top: 230px;
+	left: 899px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp25 {
+	top: 263px;
+	left: 655px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp26 {
+	top: 167px;
+	left: 706px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp27 {
+	top: 214px;
+	left: 546px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp28 {
+	top: 300px;
+	left: 556px;
+}
+
+#linestamp .linestamp__stamps .stampList .stamp.stamp29 {
+	top: 323px;
+	left: 886px;
 }
 
 #linestamp .linestamp__linestore {
@@ -834,6 +993,14 @@ body #copylightworks .modal .slick-next:before {
 #linestamp .linestamp__linestore .button {
 	display: inline-block;
 	vertical-align: middle;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-o-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+}
+
+#linestamp .linestamp__linestore .button:hover {
+	opacity: 0.6;
 }
 
 #linestamp .linestamp__linestore .or {

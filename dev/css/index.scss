@@ -302,6 +302,86 @@ body {
 	.linestamp__stamps {
 		margin-top: 38px;
 		text-align: center;
+		position: relative;
+		height:433px;
+		.stampList{
+			position: absolute;
+			top:0;
+			left:0;
+			width:1000px;
+			height:433px;
+			.stamp{
+				position: absolute;
+				$stampArray_firstSetValue:
+					10px
+					54px
+					24px
+					44px
+					124px
+					120px
+					40px
+					98px
+					206px
+					130px
+					0px
+					236px
+					264px
+					134px
+					334px
+					320px
+					340px
+					72px
+					162px
+					284px
+					48px
+					154px
+					232px
+					230px
+					263px
+					167px
+					214px
+					300px
+					323px
+					;
+				$stampArray_secondSetValue:
+					50px
+					240px
+					332px
+					471px
+					514px
+					410px
+					164px
+					8px
+					384px
+					172px
+					710px
+					282px
+					80px
+					302px
+					150px
+					266px
+					24px
+					890px
+					798px
+					757px
+					594px
+					616px
+					182px
+					899px
+					655px
+					706px
+					546px
+					556px
+					886px
+					;
+				@for $i from 1 through 29{
+					&.stamp#{$i}{
+						top:nth($stampArray_firstSetValue,$i);
+						left:nth($stampArray_secondSetValue,$i);
+					}
+				}
+			}
+		}
 	}
 	.linestamp__linestore {
 		width: 612px;
@@ -309,6 +389,10 @@ body {
 		.button {
 			display: inline-block;
 			vertical-align: middle;
+			transition:opacity 0.2s ease-in-out;
+			&:hover{
+				opacity:0.6;
+			}
 		}
 		.or {
 			display: inline-block;

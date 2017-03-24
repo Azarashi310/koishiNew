@@ -4,7 +4,6 @@ class TwitterLayout
 
 	init: ->
 		if @twFrame.length > 0
-			console.log @twFrame.contents()
 			#@twFrame.contents().find('head').append('<link href="http://freecreate.sub.jp/koishi/css/twitter.css" rel="stylesheet" type="text/css" media="all" />')
 			@twFrame.contents().find('head').append('<link href="/css/twitter.css" rel="stylesheet" type="text/css" media="all" />')
 		else
