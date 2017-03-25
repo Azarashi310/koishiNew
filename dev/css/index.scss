@@ -436,13 +436,32 @@ body {
 	.contact__form {
 		width: 800px;
 		margin: 40px auto 0 auto;
-		background-image: url(../images/contact_form.png);
-		background-position: top center;
-		background-repeat: no-repeat;
+		//background-image: url(../images/contact_form.png);
+		//background-position: top center;
+		//background-repeat: no-repeat;
+		border:solid 3px #000;
+		border-radius: 8px;
 		padding: 0 0 36px 0;
+		position: relative;
+		background-color: rgba(255,255,255,0.4);
+		&:before{
+			content: '';
+			width:800px;
+			height:100%;
+			display: block;
+			position: absolute;
+			border-radius: 8px;
+			border-right:6px solid #000;
+			border-bottom:6px solid #000;
+			right:-6px;
+			bottom:-6px;
+			z-index:1;
+		}
 		.form__inner {
 			width: 700px;
 			margin: 0 auto;
+			position: relative;
+			z-index:2;
 		}
 		.subhead {
 			padding: 34px 0 0 0;
@@ -463,28 +482,33 @@ body {
 		}
 		.mailaddres {
 			margin: 20px 0 0 0;
-			.first {
-				display: block;
-				margin: 9px 0 0 0;
-				width: 680px;
-				height: 46px;
-				border-radius: 5px;
-				border: solid 2px #000;
-				color: rgba(0, 0, 0, 0.3);
-				font-size: 14px;
-				padding: 0 0 0 16px;
+			.address{
+				font-size:24px;
+				text-align: center;
+
 			}
-			.second {
-				display: block;
-				margin: 10px 0 0 0;
-				width: 680px;
-				height: 46px;
-				border-radius: 5px;
-				border: solid 2px #000;
-				color: rgba(0, 0, 0, 0.3);
-				font-size: 14px;
-				padding: 0 0 0 16px;
-			}
+			//.first {
+			//	display: block;
+			//	margin: 9px 0 0 0;
+			//	width: 680px;
+			//	height: 46px;
+			//	border-radius: 5px;
+			//	border: solid 2px #000;
+			//	color: rgba(0, 0, 0, 0.3);
+			//	font-size: 14px;
+			//	padding: 0 0 0 16px;
+			//}
+			//.second {
+			//	display: block;
+			//	margin: 10px 0 0 0;
+			//	width: 680px;
+			//	height: 46px;
+			//	border-radius: 5px;
+			//	border: solid 2px #000;
+			//	color: rgba(0, 0, 0, 0.3);
+			//	font-size: 14px;
+			//	padding: 0 0 0 16px;
+			//}
 		}
 		.contactus {
 			margin: 22px 0 0 0;
@@ -501,8 +525,15 @@ body {
 			}
 		}
 		.submit {
+			display: block;
+			width:355px;
 			text-align: center;
-			margin: 30px 0 0 0;
+			margin: 30px auto 0 auto;
+			transition:opacity 0.2s ease-in-out;
+			cursor: pointer;
+			&:hover{
+				opacity:0.6;
+			}
 		}
 	}
 }

@@ -12,7 +12,6 @@ $ ->
 	stampAnimetion = new StampAnimetion()
 	stampAnimetion.init()
 	$(window).load(->
-		console.log 'windowLoad'
 		twitterLayout = new TwitterLayout()
 		twitterLayout.init()
 	)

@@ -47,7 +47,6 @@ class Slick
 		@sliderArrowNext.on 'click',this,@arrowClick
 	movedSlider: (e) ->
 		_this = e.data
-		console.log 'movedSliderEvent : ',_this.allowSliderButtonClick
 		_this.allowSliderButtonClick = true
 	dotclick: (e) ->
 		_this = e.data
@@ -63,7 +62,6 @@ class Slick
 		_this = e.data
 		console.log 'arrowClickEvent : ',_this.allowSliderButtonClick
 		if _this.allowSliderButtonClick
-#			_this.allowSliderButtonClick = false
 			if $(@).hasClass('slick-prev')
 				console.log 'prev'
 				_this.changeDot(false)
