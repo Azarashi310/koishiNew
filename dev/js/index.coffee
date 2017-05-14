@@ -7,8 +7,8 @@ $ ->
 	characterSlick.init(false);
 	modalSlick = new Slick($('#copylightworks .slick'),$('#copylightworks .slick-dots'))
 	modalSlick.init(true);
-	bgAnimetion = new BackGroundAnimetion()
-	bgAnimetion.init()
+#	bgAnimetion = new BackGroundAnimetion()
+#	bgAnimetion.init()
 	stampAnimetion = new StampAnimetion()
 	stampAnimetion.init()
 	$(window).load(->

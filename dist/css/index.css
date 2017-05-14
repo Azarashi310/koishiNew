@@ -417,18 +417,28 @@ body {
       background-image: url("../images/profile_baloon.png");
       background-repeat: no-repeat;
       width: 525px;
+      height: 321px;
       float: left; }
+      body #profile .profile__baloon .baloonInner {
+        overflow-y: scroll;
+        width: 450px;
+        height: 265px;
+        margin-top: 25px;
+        padding-left: 31px;
+        padding-bottom: 25px; }
       body #profile .profile__baloon .intro {
         font-size: 12px;
-        padding-top: 25px;
-        padding-left: 31px;
         line-height: 1.7; }
-      body #profile .profile__baloon .text {
-        font-size: 12px;
-        padding-top: 22px;
-        padding-left: 31px;
-        padding-bottom: 25px;
-        line-height: 1.8; }
+      body #profile .profile__baloon .achievements {
+        margin-top: 22px; }
+        body #profile .profile__baloon .achievements .text {
+          font-size: 12px;
+          line-height: 1.8; }
+          body #profile .profile__baloon .achievements .text span {
+            display: inline-block;
+            vertical-align: top; }
+            body #profile .profile__baloon .achievements .text span.detail {
+              margin-left: 1em; }
     body #profile .profile__autorimage {
       float: left;
       margin-top: 15px;
@@ -528,7 +538,7 @@ body {
           body #character .character__detail .slideshow .description .text {
             padding: 0 20px; }
   body #copylightworks {
-    margin-top: 94px; }
+    margin-top: 170px; }
     body #copylightworks .copylightworks__title {
       text-align: center; }
     body #copylightworks .slick-dots {

@@ -53,21 +53,37 @@ body {
 			background-image: url("../images/profile_baloon.png");
 			background-repeat: no-repeat;
 			width: 525px;
+			height:321px;
 			float: left;
-			.intro {
-				font-size: 12px;
-				padding-top: 25px;
-				padding-left: 31px;
-				line-height: 1.7;
-			}
-			.text {
-				font-size: 12px;
-				padding-top: 22px;
+			.baloonInner{
+				overflow-y: scroll;
+				width:450px;
+				height:265px;
+				margin-top:25px;
 				padding-left: 31px;
 				padding-bottom: 25px;
-				line-height: 1.8;
+			}
+			
+			.intro {
+				font-size: 12px;
+				line-height: 1.7;
+			}
+			.achievements {
+				margin-top:22px;
+				.text{
+					font-size: 12px;
+					line-height: 1.8;
+					span{
+						display: inline-block;
+						vertical-align: top;
+						&.detail{
+							margin-left:1em;
+						}
+					}
+				}
 			}
 		}
+		
 		.profile__autorimage {
 			float: left;
 			margin-top: 15px;
@@ -172,7 +188,7 @@ body {
 		}
 	}
 	#copylightworks {
-		margin-top: 94px;
+		margin-top: 170px;
 		.copylightworks__title {
 			text-align: center;
 		}

@@ -29,20 +29,72 @@ block contents
 					img(src="./images/profile_title.png",alt="プロフィール PROFILE")
 				.block
 					.profile__baloon
-						p.intro.
-							福岡県出身、在住のイラストレーター。キャラクターデザインをメインに活動中。<br>
-							実在する国に住む、動物や架空の生物がモチーフのキャラクター作成が多い。
-						p.text.
-							2009.11　グループ展「あ、これ贈り物にしたいんで包んでください。」<br>
-							2010.03　グループ展「CROUCH START!」<br>
-							2011.03　グループ展「CROUCH START!2 GROW!」<br>
-							2011.05　COMIC CITY福岡26「House Dust」サークル参加<br>
-							2012.05　COMIC CITY福岡29「mingle」サークル参加<br>
-							2012.09　COMIC CITY福岡30「0102Works.」サークル参加<br>
-							2013.01　COMIC CITY福岡31「0102Works.」サークル参加<br>
-							2013.03　子どもの村 子どもプログラム　イラストの提供<br>
-							2016.04　個展「」<br>
-							2016.06　個展「PEEP」
+						.baloonInner
+							p.intro.
+								福岡県出身、在住のイラストレーター。キャラクターデザインをメインに活動中。<br>
+								実在する国に住む、動物や架空の生物がモチーフのキャラクター作成が多い。
+							ul.achievements
+								li.list
+									p.text
+										span.date 2009.11
+										span.detail グループ展【あ、これ贈り物にしたいんで包んでください。】
+									p.text
+										span.date 2010.3
+										span.detail グループ展【CROUCH START!】
+									p.text
+										span.date 2011.3
+										span.detail グループ展【CROUCH START!2 GROW!】
+									p.text
+										span.date 2013.3
+										span.detail 子どもの村 子どもプログラム　イラストの提供
+									p.text
+										span.date 2014.1
+										span.detail 新年特別展覧会　干支展「午」
+									p.text
+										span.date 2014.1
+										span.detail Global Game Jam 2014　参加
+									p.text
+										span.date 2014.2
+										span.detail グループ展【BRANCH】
+									p.text
+										span.date 2014.8
+										span.detail ～絵画・イラスト～ 「ニュー版画＆厳選！原画 展」
+									p.text
+										span.date 2015.2
+										span.detail グループ展【BRANCH】
+									p.text
+										span.date 2015.5
+										span.detail 株式会社MUSCLE MEDIA<br>マスコットキャラクター【マッスルくん】作成
+									p.text
+										span.date 2015.5
+										span.detail AAA 4周年記念展覧会
+									p.text
+										span.date 2015.6
+										span.detail 株式会社MUSCLE MEDIA<br>マッスルくんLINEスタンプ 制作
+									p.text
+										span.date 2015.7
+										span.detail 個展【CLUTTER TRIPPERS】
+									p.text
+										span.date 2015.7
+										span.detail 株式会社MUSCLE MEDIA<br>博多弁を喋るねこLINEスタンプ 制作
+									p.text
+										span.date 2015.11
+										span.detail 146 BEST OF ONE MAN SHOW 特別賞受賞
+									p.text
+										span.date 2016.2
+										span.detail グループ展【BRANCH】
+									p.text
+										span.date 2016.4
+										span.detail 個展【WORLD APART!~Broke Version~】
+									p.text
+										span.date 2016.6
+										span.detail 個展【PEEP】
+									p.text
+										span.date 2016.6
+										span.detail イラストレーター　Snaker　マスコットキャラクター作成
+									p.text
+										span.date 2016.7
+										span.detail バンド　あいまいもこ　マスコットキャラクター【もこくん】作成
 					.profile__autorimage
 						img(src="./images/autorimage.png",alt="")
 		#character
@@ -175,7 +227,7 @@ block contents
 			.inner
 				-var copylightCount = 24;
 				.copylightworks__title
-					img(src="./images/copylightworks_title.png",alt="版権類作品たち COPYLIGHT WORKS")
+					img(src="./images/copylightworks_title.png",alt="ファンアート FANART")
 				ul.lists.slick-dots
 					- for (var i = 1; i <= copylightCount; i++) {
 					li.list
