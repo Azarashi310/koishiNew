@@ -1,11 +1,7 @@
 #footer {
   background-color: #191919;
   width: 100%;
-  height: 50px;
-  -webkit-transition: background-color 200ms ease-in-out;
-  -o-transition: background-color 200ms ease-in-out;
-  -moz-transition: background-color 200ms ease-in-out;
-  transition: background-color 200ms ease-in-out; }
+  height: 50px; }
   #footer .footer__text {
     text-align: center;
     line-height: 50px;
