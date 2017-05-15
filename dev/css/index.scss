@@ -489,30 +489,11 @@ body {
 			.address{
 				font-size:24px;
 				text-align: center;
-
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				cursor: default;
 			}
-			//.first {
-			//	display: block;
-			//	margin: 9px 0 0 0;
-			//	width: 680px;
-			//	height: 46px;
-			//	border-radius: 5px;
-			//	border: solid 2px #000;
-			//	color: rgba(0, 0, 0, 0.3);
-			//	font-size: 14px;
-			//	padding: 0 0 0 16px;
-			//}
-			//.second {
-			//	display: block;
-			//	margin: 10px 0 0 0;
-			//	width: 680px;
-			//	height: 46px;
-			//	border-radius: 5px;
-			//	border: solid 2px #000;
-			//	color: rgba(0, 0, 0, 0.3);
-			//	font-size: 14px;
-			//	padding: 0 0 0 16px;
-			//}
 		}
 		.contactus {
 			margin: 22px 0 0 0;

@@ -824,7 +824,11 @@ body {
       margin: 20px 0 0 0; }
       #contact .contact__form .mailaddres .address {
         font-size: 24px;
-        text-align: center; }
+        text-align: center;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        cursor: default; }
     #contact .contact__form .contactus {
       margin: 22px 0 0 0; }
       #contact .contact__form .contactus input {
