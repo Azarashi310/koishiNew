@@ -805,7 +805,9 @@ body {
       position: relative;
       z-index: 2; }
     #contact .contact__form .subhead {
-      padding: 34px 0 0 0; }
+      padding: 34px 0 0 0;
+      font-size: 14px;
+      line-height: 1.5; }
     #contact .contact__form .name {
       margin: 27px 0 0 0; }
       #contact .contact__form .name input {
