@@ -3,50 +3,68 @@ Modal = require('./_modal')
 class Slick
 	constructor: (slider,dots) ->
 		@slider = slider
+		@charaSlider
+		@modalSlider
 		@dots = dots
+		@charaDot
+		@modalDot
 		@dot = $(@dots[0]).find('.list')
 		@$sliderDots = $('.character__thumb .list')
 		@characterSliderCurrent = 0
 		@sliderArrowPrev
 		@sliderArrowNext
 		@modal
-		@modalFlag = false
+		@modalFlag  = false
 		@slider.on 'afterChange' , @ , @movedSlider
 		@allowSliderButtonClick = true
 	init: (modalFlag) ->
+		@modalFlag = modalFlag
 		easekind = ''
 		sliderSpeed = 0
 		centerPd = ''
 		accessibilityFlag = true
 		if modalFlag
+			@modalSlider = @slider
+			@modalDot = $(@dots[0]).find('.list')
 			easekind = 'none'
 			sliderSpeed = 0
 			centerPd = '60px'
 			accessibilityFlag = true
+			@modalSlider.slick({
+				cssEase:easekind,
+				speed:sliderSpeed,
+				draggable:false,
+				dots:false,
+				variableWidth:true,
+				centerMode:true,
+				centerPadding:centerPd
+				slidesToShow:1
+			})
+			@modal = new Modal($('.modal'),$('#main'))
+			@modalDot.on 'click',this,@dotclick
+			@modal.init()
 		else
+			@charaSlider = @slider
+			@charaDot = $(@dots[0]).find('.list')
 			easekind = 'ease'
 			sliderSpeed = 500
 			centerPd = '50px'
 			accessibilityFlag = false
-		@slider.slick({
-			cssEase:easekind,
-			speed:sliderSpeed,
-			draggable:false,
-			dots:false,
-			variableWidth:true,
-			centerMode:true,
-			centerPadding:centerPd
-			slidesToShow:1
-		})
-		if modalFlag
-			@modalFlag = true
-			@modal = new Modal($('.modal'),$('#main'))
-			@modal.init()
-		@dot.on 'click',this,@dotclick
-		@sliderArrowPrev = $('#character .slick-prev')
-		@sliderArrowNext = $('#character .slick-next')
-		@sliderArrowPrev.on 'click',this,@arrowClick
-		@sliderArrowNext.on 'click',this,@arrowClick
+			@charaSlider.slick({
+				cssEase:easekind,
+				speed:sliderSpeed,
+				draggable:false,
+				dots:false,
+				variableWidth:true,
+				centerMode:true,
+				centerPadding:centerPd
+				slidesToShow:1
+			})
+			@charaDot.on 'click',this,@dotclick
+			@sliderArrowPrev = $('#character .slick-prev')
+			@sliderArrowNext = $('#character .slick-next')
+			@sliderArrowPrev.on 'click',this,@arrowClick
+			@sliderArrowNext.on 'click',this,@arrowClick
 	#連打対策
 	movedSlider: (e) ->
 		_this = e.data
@@ -54,16 +72,23 @@ class Slick
 		console.log 'enableSlide'
 	dotclick: (e) ->
 		_this = e.data
-		if _this.allowSliderButtonClick == false
-			return false
-		index = _this.dot.index(@)
-		_this.characterSliderCurrent = index
-		console.log _this.characterSliderCurrent
-		_this.resetActive()
-		$(_this.dot[index]).addClass('active')
-		_this.slider.slick 'slickGoTo',parseInt(index)
 		if _this.modalFlag
+			index = _this.modalDot.index(@)
+			_this.characterSliderCurrent = index
+			console.log _this.characterSliderCurrent
+			$(_this.modalDot[index]).addClass('active')
+			_this.slider.slick 'slickGoTo',parseInt(index)
 			_this.modal.showModal()
+		else
+			if _this.allowSliderButtonClick == false
+				return false
+			index = _this.charaDot.index(@)
+			_this.characterSliderCurrent = index
+			console.log _this.characterSliderCurrent
+			_this.resetActive()
+			$(_this.charaDot[index]).addClass('active')
+			_this.slider.slick 'slickGoTo',parseInt(index)
+
 	arrowClick: (e) ->
 		_this = e.data
 		console.log 'arrowClickEvent : ',_this.allowSliderButtonClick
