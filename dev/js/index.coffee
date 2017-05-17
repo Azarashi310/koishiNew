@@ -3,10 +3,10 @@ TwitterLayout = require('./_layout/_twitterLayout')
 BackGroundAnimetion = require('./_animetion/backgroundAnimetion')
 StampAnimetion = require('./_animetion/stampAnimetion')
 $ ->
-	characterSlick = new Slick($('.character__detail .slick'),$('.slick-dots'))
+	characterSlick = new Slick($('.character__detail .slick'),$('#character .slick-dots'))
 	characterSlick.init(false);
-	modalSlick = new Slick($('#copylightworks .slick'),$('#copylightworks .slick-dots'))
-	modalSlick.init(true);
+#	modalSlick = new Slick($('#copylightworks .slick'),$('#copylightworks .slick-dots'))
+#	modalSlick.init(true);
 #	bgAnimetion = new BackGroundAnimetion()
 #	bgAnimetion.init()
 	stampAnimetion = new StampAnimetion()

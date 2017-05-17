@@ -7,8 +7,8 @@ class Slick
 		@dot = $(@dots[0]).find('.list')
 		@$sliderDots = $('.character__thumb .list')
 		@characterSliderCurrent = 0
-		@sliderArrowPrev = $('.character__detail .slick .slick-prev')
-		@sliderArrowNext = $('.character__detail .slick .slick-next')
+		@sliderArrowPrev
+		@sliderArrowNext
 		@modal
 		@modalFlag = false
 		@slider.on 'afterChange' , @ , @movedSlider
@@ -43,13 +43,19 @@ class Slick
 			@modal = new Modal($('.modal'),$('#main'))
 			@modal.init()
 		@dot.on 'click',this,@dotclick
+		@sliderArrowPrev = $('#character .slick-prev')
+		@sliderArrowNext = $('#character .slick-next')
 		@sliderArrowPrev.on 'click',this,@arrowClick
 		@sliderArrowNext.on 'click',this,@arrowClick
+	#連打対策
 	movedSlider: (e) ->
 		_this = e.data
 		_this.allowSliderButtonClick = true
+		console.log 'enableSlide'
 	dotclick: (e) ->
 		_this = e.data
+		if _this.allowSliderButtonClick == false
+			return false
 		index = _this.dot.index(@)
 		_this.characterSliderCurrent = index
 		console.log _this.characterSliderCurrent
@@ -62,6 +68,7 @@ class Slick
 		_this = e.data
 		console.log 'arrowClickEvent : ',_this.allowSliderButtonClick
 		if _this.allowSliderButtonClick
+			_this.allowSliderButtonClick = false;
 			if $(@).hasClass('slick-prev')
 				console.log 'prev'
 				_this.changeDot(false)
