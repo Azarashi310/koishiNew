@@ -69,13 +69,11 @@ class Slick
 	movedSlider: (e) ->
 		_this = e.data
 		_this.allowSliderButtonClick = true
-		console.log 'enableSlide'
 	dotclick: (e) ->
 		_this = e.data
 		if _this.modalFlag
 			index = _this.modalDot.index(@)
 			_this.characterSliderCurrent = index
-			console.log _this.characterSliderCurrent
 			$(_this.modalDot[index]).addClass('active')
 			_this.slider.slick 'slickGoTo',parseInt(index)
 			_this.modal.showModal()
@@ -84,28 +82,23 @@ class Slick
 				return false
 			index = _this.charaDot.index(@)
 			_this.characterSliderCurrent = index
-			console.log _this.characterSliderCurrent
 			_this.resetActive()
 			$(_this.charaDot[index]).addClass('active')
 			_this.slider.slick 'slickGoTo',parseInt(index)
 
 	arrowClick: (e) ->
 		_this = e.data
-		console.log 'arrowClickEvent : ',_this.allowSliderButtonClick
 		if _this.allowSliderButtonClick
 			_this.allowSliderButtonClick = false;
 			if $(@).hasClass('slick-prev')
-				console.log 'prev'
 				_this.changeDot(false)
 			else
-				console.log 'next'
 				_this.changeDot(true)
 		else
 			return false
 	# prevOrNext false なら prev true なら next
 	changeDot:(prevOrNext) ->
 		@resetActive()
-		console.log @characterSliderCurrent
 		if prevOrNext
 			if @characterSliderCurrent == @$sliderDots.length - 1
 				$(@$sliderDots[0]).addClass('active')
