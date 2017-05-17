@@ -414,7 +414,8 @@ body {
 #twitter {
 	margin-top: 108px;
 	.twitter__title {
-		text-align: center;
+		width:388px;
+		margin-left:326px;
 	}
 	.twitter__detail {
 		@include clearfix();
@@ -440,9 +441,6 @@ body {
 	.contact__form {
 		width: 800px;
 		margin: 40px auto 0 auto;
-		//background-image: url(../images/contact_form.png);
-		//background-position: top center;
-		//background-repeat: no-repeat;
 		border:solid 3px #000;
 		border-radius: 8px;
 		padding: 0 0 36px 0;

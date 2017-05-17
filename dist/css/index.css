@@ -754,7 +754,8 @@ body {
 #twitter {
   margin-top: 108px; }
   #twitter .twitter__title {
-    text-align: center; }
+    width: 388px;
+    margin-left: 326px; }
   #twitter .twitter__detail {
     zoom: 1;
     margin: 39px 0 0 0; }
