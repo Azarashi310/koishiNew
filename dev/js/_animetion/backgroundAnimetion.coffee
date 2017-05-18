@@ -10,8 +10,8 @@ class BackGroundAnimetion
 		TweenMax.ticker.fps(15)
 		@setAnimetion(120)
 		#隠し要素用
-#		$(window).keydown @,@keyDownEvent
-#		$(window).keyup @,@keyUpEvent
+		$(window).keydown @,@keyDownEvent
+		$(window).keyup @,@keyUpEvent
 	keyDownEvent:(e) ->
 		_this = e.data
 		_this.keyState[e.keyCode] = true
@@ -37,6 +37,10 @@ class BackGroundAnimetion
 				_this.bgposy = 4240
 				_this.setAnimetion(120)
 				console.log 'right'
+		if _this.keyState[91] && _this.keyState[82]
+			location.reload()
+		if _this.keyState[116]
+			location.reload(true)
 		return false
 	setAnimetion:(time)->
 		TweenMax.ticker.fps(15)
