@@ -9,8 +9,9 @@ class BackGroundAnimetion
 	init:() ->
 		TweenMax.ticker.fps(15)
 		@setAnimetion(120)
-		$(window).keydown @,@keyDownEvent
-		$(window).keyup @,@keyUpEvent
+		#隠し要素用
+#		$(window).keydown @,@keyDownEvent
+#		$(window).keyup @,@keyUpEvent
 	keyDownEvent:(e) ->
 		_this = e.data
 		_this.keyState[e.keyCode] = true
