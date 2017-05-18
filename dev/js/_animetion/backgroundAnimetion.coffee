@@ -38,8 +38,10 @@ class BackGroundAnimetion
 				_this.setAnimetion(120)
 				console.log 'right'
 		if _this.keyState[91] && _this.keyState[82]
-			location.reload()
+			location.reload(true)
 		if _this.keyState[116]
+			location.reload()
+		if _this.keyState[16] && _this.keyState[116]
 			location.reload(true)
 		return false
 	setAnimetion:(time)->
