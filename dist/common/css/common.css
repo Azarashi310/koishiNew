@@ -1,3 +1,6 @@
+body {
+  min-width: 1024px; }
+
 #footer {
   background-color: #191919;
   width: 100%;
