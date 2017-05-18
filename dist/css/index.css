@@ -808,7 +808,8 @@ body {
     #contact .contact__form .subhead {
       padding: 34px 0 0 0;
       font-size: 14px;
-      line-height: 1.5; }
+      line-height: 1.5;
+      text-align: center; }
     #contact .contact__form .name {
       margin: 27px 0 0 0; }
       #contact .contact__form .name input {
