@@ -398,6 +398,90 @@ body {
         margin: 0 auto; }
       body #mv .mv__title img.text {
         margin-top: 22px; }
+    body #mv .mv__inner {
+      position: relative;
+      width: 1000px;
+      margin: 0 auto; }
+    body #mv .mv__propaganda {
+      position: absolute;
+      right: 179px;
+      bottom: 295px;
+      cursor: pointer; }
+      body #mv .mv__propaganda .baloon {
+        background-image: url("../images/mv_propaganda_baloon.png");
+        width: 279px;
+        height: 111px;
+        position: absolute;
+        z-index: 4;
+        opacity: 0; }
+        body #mv .mv__propaganda .baloon .text {
+          margin-top: 16px;
+          margin-left: 20px; }
+        body #mv .mv__propaganda .baloon .icon {
+          width: 55px;
+          height: 54px;
+          background-color: #000;
+          position: absolute;
+          -webkit-border-radius: 5px;
+             -moz-border-radius: 5px;
+                  border-radius: 5px;
+          top: 18px;
+          right: 20px; }
+          body #mv .mv__propaganda .baloon .icon .arrow {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            -webkit-transform: rotate(45deg);
+               -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                 -o-transform: rotate(45deg);
+                    transform: rotate(45deg); }
+            body #mv .mv__propaganda .baloon .icon .arrow.arrow1 {
+              top: 15px;
+              left: 4px; }
+            body #mv .mv__propaganda .baloon .icon .arrow.arrow2 {
+              top: 15px;
+              left: 18px; }
+      body #mv .mv__propaganda .chara {
+        position: absolute;
+        left: -8px;
+        bottom: -264px;
+        z-index: 4;
+        -webkit-border-radius: 0 0 50% 50%;
+           -moz-border-radius: 0 0 50% 50%;
+                border-radius: 0 0 50% 50%;
+        width: 240px;
+        height: 200px;
+        overflow: hidden;
+        opacity: 1; }
+      body #mv .mv__propaganda .charaBg {
+        position: absolute;
+        left: -42px;
+        bottom: -228px;
+        z-index: 2;
+        width: 240px;
+        height: 200px;
+        -webkit-border-radius: 0 0 50% 50%;
+           -moz-border-radius: 0 0 50% 50%;
+                border-radius: 0 0 50% 50%;
+        opacity: 1; }
+      body #mv .mv__propaganda .circle {
+        width: 162px;
+        height: 162px;
+        border: solid 4px #000;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -246px;
+        right: -226px;
+        z-index: 3;
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 60px #fff;
+           -moz-box-shadow: 0 0 60px #fff;
+                box-shadow: 0 0 60px #fff; }
   body #contents {
     background-image: url(../images/bg_dots.png);
     background-position: top center;

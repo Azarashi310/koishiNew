@@ -33,7 +33,91 @@ body {
 				margin-top: 22px;
 			}
 		}
+		.mv__inner{
+			position: relative;
+			width:1000px;
+			margin:0 auto;
+		}
+		.mv__propaganda{
+			position: absolute;
+			right: 179px;
+			bottom: 295px;
+			cursor: pointer;
+			.baloon{
+				background-image: url('../images/mv_propaganda_baloon.png');
+				width: 279px;
+				height:111px;
+				position: absolute;
+				z-index:4;
+				opacity:0;
+				.text{
+					margin-top: 16px;
+					margin-left: 20px;
+				}
+				.icon{
+					width:55px;
+					height:54px;
+					background-color: #000;
+					position: absolute;
+					border-radius: 5px;
+					top: 18px;
+					right: 20px;
+					.arrow{
+						position: absolute;
+						width:20px;
+						height:20px;
+						border-top:2px solid #fff;
+						border-right:2px solid #fff;
+						transform: rotate(45deg);
+						&.arrow1{
+							top: 15px;
+							left: 4px;
+						}
+						&.arrow2{
+							top: 15px;
+							left: 18px;
+						}
+					}
+				}
+			}
+			.chara{
+				position: absolute;
+				left: -8px;
+				bottom: -264px;
+				z-index: 4;
+				border-radius: 0 0 50% 50%;
+				width: 240px;
+				height: 200px;
+				overflow: hidden;
+				opacity:1;
+			}
+			.charaBg{
+				position: absolute;
+				left: -42px;
+				bottom: -228px;
+				z-index:2;
+				width: 240px;
+				height: 200px;
+				border-radius: 0 0 50% 50%;
+				opacity:1;
+			}
+			.circle{
+				width: 162px;
+				height: 162px;
+				border: solid 4px #000;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				border-radius: 50%;
+				position: absolute;
+				bottom: -246px;
+				right: -226px;
+				z-index: 3;
+				background-color: #fff;
+				box-shadow: 0 0 60px #fff;
+			}
+		}
 	}
+	
 	#contents {
 		background-image: url(../images/bg_dots.png);
 		background-position: top center;
