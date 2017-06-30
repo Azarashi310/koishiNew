@@ -6,6 +6,7 @@ class MVPropaganda
     init: () ->
         @scrollLock = new ScrollLock($('#main'))
         $('#mv .mv__propaganda').on('click', this, @modalToggle)
+        $('#mv .mv__modal .closeButton').on('click', this, @modalToggle)
         @iconAnimation()
     iconAnimation:() ->
         _this = @
