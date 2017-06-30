@@ -418,14 +418,20 @@ body {
         width: 700px;
         height: 430px;
         background-color: #fff; }
+      body #mv .mv__modal .movieArea .subhead {
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        font-weight: normal;
+        color: #fff;
+        margin-top: 27px; }
       body #mv .mv__modal .movieArea .text {
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: -0.02em;
         line-height: 2;
         color: #fff;
-        margin-top: 24px; }
+        margin-top: 6px; }
       body #mv .mv__modal .mapArea {
-        margin-top: 53px; }
+        margin-top: 41px; }
         body #mv .mv__modal .mapArea .map {
           width: 700px;
           height: 430px;

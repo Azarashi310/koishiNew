@@ -3,11 +3,13 @@ ScrollLock = require('../../common/js/_layout/_scrollLock')
 class MVPropaganda
     constructor: () ->
         @scrollLock
+        @video
     init: () ->
         @scrollLock = new ScrollLock($('#main'))
         $('#mv .mv__propaganda').on('click', this, @modalToggle)
         $('#mv .mv__modal .closeButton').on('click', this, @modalToggle)
         @iconAnimation()
+        @video = document.getElementById("video");
     iconAnimation:() ->
         _this = @
         timeLine = new TimelineMax({
@@ -115,12 +117,15 @@ class MVPropaganda
         console.log('MVIconClick')
         if $('#mv .mv__modal').hasClass('show')
             $('#mv .mv__modal').toggleClass('show');
+            _this.video.pause()
+            _this.video.currentTime = 0
             TweenMax.to($('#mv .mv__modal'),0.2,{
                 opacity:'0'
             })
             _this.scrollLock.disabledScrollLock()
         else
             $('#mv .mv__modal').toggleClass('show');
+            _this.video.play()
             TweenMax.to($('#mv .mv__modal'),0.2,{
                 opacity:'1'
             })
