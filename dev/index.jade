@@ -19,6 +19,24 @@ block css
 	link(rel="stylesheet" type="text/css" href="./common/css/slick.css" media="all")
 block contents
 	#mv
+		.mv__modal
+			.closeButton
+				span.bar
+			.modalInner
+				h2.title
+					img(src="./images/mv_modal_title.png", alt="個展開催します！")
+				.movieArea
+					.movie
+						video(src="./movie/koishikoten.mp4" controls width="700" height="430")
+					p.text.
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				.mapArea
+					.map
+					p.location.
+						〒231-0023<br>
+						神奈川県横浜市中区山下町82 徳永ビル<br>
+						TEL : 045-664-3907<br>
+						WEB : <span class><a class="link" href="http://artaraqasia.com/" target="_blank">artaraqasia.com</a></span>
 		.mv__title
 			img.logo(src="./images/mv_chara.png",alt="")
 			img.text(src="./images/mv_title.png",alt="KOISHI")
@@ -30,8 +48,9 @@ block contents
 					.icon
 						span.arrow.arrow1
 						span.arrow.arrow2
-				.chara
-					img(src="./images/mv_propaganda_chara.png", alt="")
+				.charaMask
+					.chara
+						img(src="./images/mv_propaganda_chara.png", alt="")
 				.charaBg
 					img(src="./images/mv_propaganda_chara_bg.png", alt="")
 				.circle

@@ -9,7 +9,6 @@ class Modal
 		@list = $('#copylightworks .lists .list')
 		@closebutton = @modal.find('.closebutton')
 		@currentScrollPoint = 0
-
 	init:() ->
 		@mainHeight = window.innerHeight
 		@listsHeight = @lists.innerHeight()
@@ -21,6 +20,7 @@ class Modal
 	resizeEvent:(e) ->
 		_this = e.data
 		_this.setmargin()
+		return
 	showModal:() ->
 		@currentScrollPoint = $(window).scrollTop()
 		$(@contents).css({
@@ -29,6 +29,7 @@ class Modal
 			top:-1*@currentScrollPoint
 		})
 		$(@modal).css({'opacity':1,'z-index':2})
+		return
 	closebuttonClick:(e) ->
 		_this = e.data
 		_this.contents.attr({style:''})
@@ -36,7 +37,10 @@ class Modal
 			scrollTop:_this.currentScrollPoint
 		})
 		_this.modal.css({'opacity':0,'z-index':-1})
+		return
 	setmargin:() ->
 		@mainHeight = window.innerHeight
 		@lists.css('margin',((@mainHeight - @listsHeight)/2)+'px auto')
+		return
+
 module.exports = Modal
