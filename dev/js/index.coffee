@@ -12,9 +12,9 @@ $ ->
 #	bgAnimetion.init()
 	stampAnimetion = new StampAnimetion()
 	stampAnimetion.init()
-	mvPropaganda = new MVPropaganda($('#mv .mv__propaganda'))
+#	mvPropaganda = new MVPropaganda($('#mv .mv__propaganda'))
 	$(window).load(->
 		twitterLayout = new TwitterLayout()
 		twitterLayout.init()
-		mvPropaganda.init()
+#		mvPropaganda.init()
 	)
