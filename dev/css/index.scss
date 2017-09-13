@@ -126,6 +126,8 @@ body {
 				height:111px;
 				position: absolute;
 				z-index:4;
+				opacity:0;
+				top:0;
 				.text{
 					margin-top: 16px;
 					margin-left: 20px;
@@ -168,9 +170,12 @@ body {
 			}
 			.chara{
 				position: absolute;
-				left: 20px;
-				top: 19px;
-				opacity:1;
+				//left: 20px;
+				//top: 19px;
+				top:100px;
+				left:100px;
+				opacity:0;
+				//opacity:1;
 			}
 			.charaBg{
 				position: absolute;
@@ -180,12 +185,17 @@ body {
 				width: 252px;
 				height: 182px;
 				border-radius: 0 0 50% 50%;
-				opacity:1;
+				opacity:0;
+				//opacity:1;
 			}
 			.circle{
-				width: 162px;
-				height: 162px;
+				//width: 162px;
+				//height: 162px;
+				width:0;
+				height:0;
 				border: solid 4px #000;
+				border-width: 0;
+				opacity:0;
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				border-radius: 50%;

@@ -473,7 +473,9 @@ body {
         width: 279px;
         height: 111px;
         position: absolute;
-        z-index: 4; }
+        z-index: 4;
+        opacity: 0;
+        top: 0; }
         body #mv .mv__propaganda .baloon .text {
           margin-top: 16px;
           margin-left: 20px; }
@@ -516,9 +518,9 @@ body {
         z-index: 4; }
       body #mv .mv__propaganda .chara {
         position: absolute;
-        left: 20px;
-        top: 19px;
-        opacity: 1; }
+        top: 100px;
+        left: 100px;
+        opacity: 0; }
       body #mv .mv__propaganda .charaBg {
         position: absolute;
         left: -42px;
@@ -529,11 +531,13 @@ body {
         -webkit-border-radius: 0 0 50% 50%;
            -moz-border-radius: 0 0 50% 50%;
                 border-radius: 0 0 50% 50%;
-        opacity: 1; }
+        opacity: 0; }
       body #mv .mv__propaganda .circle {
-        width: 162px;
-        height: 162px;
+        width: 0;
+        height: 0;
         border: solid 4px #000;
+        border-width: 0;
+        opacity: 0;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
