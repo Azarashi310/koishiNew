@@ -398,7 +398,8 @@ body {
       body #mv .mv__modal.show {
         display: block;
         position: fixed;
-        overflow-y: scroll; }
+        overflow-y: scroll;
+        top: 0; }
       body #mv .mv__modal .modalInner {
         width: 700px;
         margin: 0 auto;

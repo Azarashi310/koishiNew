@@ -31,7 +31,10 @@ body {
 				display: block;
 				position: fixed;
 				overflow-y: scroll;
+				top:0;
 			}
+			
+			
 			.modalInner{
 				width:700px;
 				margin:0 auto;
