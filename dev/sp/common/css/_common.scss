@@ -1,0 +1,21 @@
+html{
+	font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+body {
+	-webkit-text-size-adjust: 100%;
+	min-width: 320px;
+	img{
+		width:100%;
+	}
+	.inner{
+		padding:0 10px;
+	}
+}
+
+#footer{
+	background-color: #191919;
+	font-size:12px;
+	color: #FFFFFF;
+	line-height:50px;
+	text-align: center;
+}

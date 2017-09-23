@@ -1,0 +1,33 @@
+extends ./common/jade/template
+block meta
+    -var title = "KOISHI";
+    -var description = "";
+    -var keyword = "";
+    -var og_name = "";
+    -var og_title = "";
+    -var og_description = "";
+    -var og_url = "";
+    -var og_img = "";
+    -var dir_root = "./";
+    -var css = "";
+    -var imgPath = "images/"
+block contents
+    #mv
+        .mv__icon
+            +img('./images/mv_icon.png','KOISHI')
+    #mainContents.inner
+        #profile
+            .profile__title
+                +img('./images/profile_title.png','プロフィール PROFILE')
+            .profile__introductionArea
+                .baloon
+                    include ../common/jade/profile_text
+                .author
+                    +img('./images/profile_author.png','KOISHI')
+        #character
+            .character__title
+                +img('./images/character_title.png','キャラクター CHARACTOR')
+        #fanart
+        #linestamp
+        #twitter
+        #contact

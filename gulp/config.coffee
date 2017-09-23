@@ -38,6 +38,7 @@ module.exports =
 		dest: dest
 		entry:
 			"js/index":src+"js/index"
+			"sp/js/index":src+"sp/js/index"
 		output:
 			publicPath : dest
 			filename : "[name].min.js"

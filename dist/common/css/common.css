@@ -1,5 +1,7 @@
 body {
   min-width: 1240px; }
+  body br.sp {
+    display: none; }
 
 #footer {
   background-color: #191919;

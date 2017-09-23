@@ -1,0 +1,10 @@
+mixin settingViewPort(setting, widthSize)
+    if setting == 'fixed'
+        meta(name='viewport', content='width = '+widthSize+',initial-scale=1.0,maximum-scale=1.0')
+    else if setting == 'default'
+        meta(name='viewport', content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0')
+mixin img(imgPath, altText, width)
+    if width == undefined
+        img(src=imgPath, alt=altText)
+    else
+        img(src=imgPath, alt=altText, width=width)
