@@ -432,7 +432,7 @@ body:before {
 #profile {
   padding-top: 47px; }
   #profile .profile__title {
-    width: 223px;
+    width: 74.334%;
     margin: 0 auto;
     font-size: 0; }
   #profile .profile__introductionArea {
@@ -468,6 +468,19 @@ body:before {
       right: 0;
       bottom: 0; }
 
-#character .character__title {
-  width: 232px;
-  margin: 0 auto; }
+#character {
+  margin-top: 44px; }
+  #character .character__title {
+    width: 232px;
+    margin: 0 auto; }
+  #character .character__lists {
+    margin-top: 2px;
+    text-align: center;
+    font-size: 0;
+    height: 250px;
+    overflow: scroll; }
+    #character .character__lists .list {
+      display: inline-block;
+      margin: 10px 6px 0 6px; }
+      #character .character__lists .list .thumb {
+        width: 50px; }

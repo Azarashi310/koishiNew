@@ -25,6 +25,8 @@ body{
 	.mv__icon{
 		width:234px;
 		height:233px;
+		//width: 73.125%;
+		//height: 41.023%;
 		position: absolute;
 		margin:auto;
 		top:0;
@@ -36,7 +38,7 @@ body{
 #profile{
 	padding-top:47px;
 	.profile__title{
-		width:223px;
+		width: 74.334%;
 		margin:0 auto;
 		font-size:0;
 	}
@@ -84,8 +86,23 @@ body{
 }
 
 #character{
+	margin-top:44px;
 	.character__title{
 		width:232px;
 		margin:0 auto;
+	}
+	.character__lists{
+		margin-top:2px;
+		text-align: center;
+		font-size:0;
+		height:250px;
+		overflow: scroll;
+		.list{
+			display: inline-block;
+			margin:10px 6px 0 6px;
+			.thumb{
+				width:50px;
+			}
+		}
 	}
 }

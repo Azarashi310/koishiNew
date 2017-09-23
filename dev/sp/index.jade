@@ -27,6 +27,19 @@ block contents
         #character
             .character__title
                 +img('./images/character_title.png','キャラクター CHARACTOR')
+            ul.character__lists
+                include ../common/jade/characterListData
+                -var count = ''
+                -for(var i=1; i < charaname.length; i++){
+                    -if(i < 9){
+                        -count = '0' + i
+                    -}else{
+                        -count = i
+                    -}
+                    li.list
+                        .thumb
+                            +img('./images/character_images/thumbs/character_thumb_' + '01' + '.png','hoge')
+                -}
         #fanart
         #linestamp
         #twitter
