@@ -31,16 +31,35 @@ block contents
                 include ../common/jade/characterListData
                 -var count = ''
                 -for(var i=1; i < charaname.length; i++){
-                    -if(i < 9){
+                    -if(i < 10){
                         -count = '0' + i
                     -}else{
                         -count = i
                     -}
                     li.list
                         .thumb
-                            +img('./images/character_images/thumbs/character_thumb_' + '01' + '.png','hoge')
+                            +img('./images/character_images/thumbs/character_thumb_' + count + '.png','hoge')
                 -}
         #fanart
+            .fanart__title
+                +img('./images/fanart_title.png','ファンアート FAN ART')
+            -var copylightCount = 28;
+            ul.fanart_lists
+                -for(var i = 1; i <= copylightCount; i++){
+                    li.list
+                        img(src='./images/copylightworks/thumbs/copylightworks_thumbnail_' + i + '.png',alt="")
+                -}
         #linestamp
+            .linestamp__title
+                +img('./images/line_title.png','オリジナルLINEスタンプ LINE STAMP')
+            .linestamp__stamps
+                +img('./images/line_stamps.png','ラインスタンプ画像')
+            .linestamp__storeLink
+                a.link(href='./',target='_blank')
+                    +img('./images/line_link_text.png',alt='LINE STORE')
         #twitter
+            .twitter__title
+                +img('./images/twitter_title.png', 'ツイッター TWITTER')
         #contact
+            .contact__title
+                +img('./images/contact_title.png', 'コンタクト CONTACT')

@@ -28,13 +28,17 @@ body{
 		//width: 73.125%;
 		//height: 41.023%;
 		position: absolute;
-		margin:auto;
-		top:0;
-		right:0;
-		bottom:0;
-		left:0;
+		top:127px;
+		left:50%;
+		margin-left:-117px;
+		//margin:auto;
+		//top:0;
+		//right:0;
+		//bottom:0;
+		//left:0;
 	}
 }
+
 #profile{
 	padding-top:47px;
 	.profile__title{
@@ -46,13 +50,13 @@ body{
 		background-image: url('../images/profile_baloon.png');
 		background-position: top center;
 		background-repeat: no-repeat;
-		background-size: 300px 212px;
-		width:300px;
-		height:212px;
+		background-size: 100% 65.5%;
+		width:100%;
+		height:auto;
 		margin:20px auto 0 auto;
-		overflow: hidden;
+		overflow-y: hidden;
 		position: relative;
-		padding-bottom:120px;
+		padding-bottom:50%;
 		.baloon{
 			padding:20px 15px 0 15px;
 			height:155px;
@@ -80,29 +84,108 @@ body{
 			position: absolute;
 			width: 261px;
 			right: 0;
-			bottom: 0;
+			bottom: -2%;
 		}
 	}
 }
 
 #character{
-	margin-top:44px;
+	margin-top:50px;
 	.character__title{
 		width:232px;
 		margin:0 auto;
 	}
 	.character__lists{
-		margin-top:2px;
+		margin:2px auto 0;
 		text-align: center;
 		font-size:0;
-		height:250px;
-		overflow: scroll;
+		width:280px;
+		height:240px;
+		overflow-y: scroll;
 		.list{
 			display: inline-block;
 			margin:10px 6px 0 6px;
 			.thumb{
 				width:50px;
+				background-color: #b81919;
+				border-radius: 50%
 			}
 		}
+	}
+}
+
+#fanart{
+	//margin-top:53px;
+	margin-top:290px;
+	.fanart__title{
+		font-size:0;
+		width:76%;
+		margin:0 auto;
+	}
+	.fanart_lists{
+		text-align: center;
+		font-size:0;
+		overflow-y: scroll;
+		width:280px;
+		height:240px;
+		margin:10px auto 0;
+		.list{
+			width:50px;
+			height:50px;
+			display: inline-block;
+			margin:10px 6px 0;
+		}
+	}
+}
+
+#linestamp{
+	//margin-top:98px;
+	margin-top:108px;
+	.linestamp__title{
+		font-size:0;
+		width:86%;
+		margin:0 auto;
+	}
+	.linestamp__stamps{
+		font-size:0;
+		text-align: center;
+		width:285px;
+		margin:10px auto 0;
+	}
+	.linestamp__storeLink{
+		margin-top:38px;
+		.link{
+			background-color: #00cd22;
+			width:167px;
+			padding:15px 0;
+			margin:0 auto;
+			display: block;
+			border-radius: 4px;
+			text-align: center;
+			font-size:0;
+			img{
+				width:89px;
+			}
+		}
+	}
+}
+
+#twitter{
+	.twitter__title{
+		width:64%;
+		margin:66px auto 0;
+		text-align: center;
+		img{
+			margin-right:-10px;
+		}
+	}
+}
+
+#contact{
+	margin-top:271px;
+	.contact__title{
+		text-align: center;
+		margin:0 auto;
+		width:63%;
 	}
 }
