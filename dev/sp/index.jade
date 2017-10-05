@@ -69,3 +69,13 @@ block contents
         #contact
             .contact__title
                 +img('./images/contact_title.png', 'コンタクト CONTACT')
+            .contact__form
+                .form__inner
+                    p.subhead.
+                        お仕事の依頼、作品の感想など、ご連絡お待ちしております。<br>
+                        また、ご意見やご用命の方は下記のメールアドレスにご連絡ください。
+                    .mailaddres
+                        p.address.
+                            pow.koishi@gmail.com
+                    a.submit(href="mailto:pow.koishi@gmail.com")
+                        img(src="./images/contact_form_submit.png",alt="送信")

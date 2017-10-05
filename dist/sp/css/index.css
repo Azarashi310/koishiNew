@@ -552,3 +552,27 @@ body:before {
     text-align: center;
     margin: 0 auto;
     width: 63%; }
+  #contact .contact__form {
+    position: relative;
+    border: solid 3px #000;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-top: 16px; }
+    #contact .contact__form:before {
+      content: '';
+      width: 298px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      -webkit-border-radius: 6px;
+         -moz-border-radius: 6px;
+              border-radius: 6px;
+      border-right: 4px solid #000;
+      border-bottom: 4px solid #000;
+      right: -5px;
+      bottom: -4px;
+      z-index: 1; }
+    #contact .contact__form .submit {
+      margin: 0 auto; }

@@ -194,4 +194,36 @@ body{
 		margin:0 auto;
 		width:63%;
 	}
+	.contact__form{
+		position: relative;
+		border:solid 3px #000;
+		border-radius: 6px;
+		background-color: rgba(255,255,255,0.4);
+		margin-top:16px;
+		&:before{
+			content: '';
+			width: 298px;
+			height:100%;
+			display: block;
+			position: absolute;
+			border-radius: 6px;
+			border-right:4px solid #000;
+			border-bottom:4px solid #000;
+			right:-5px;
+			bottom:-4px;
+			z-index:1;
+		}
+		.form__inner{
+
+		}
+		.subhead{
+
+		}
+		.mailaddres{
+
+		}
+		.submit{
+			margin:0 auto;
+		}
+	}
 }
