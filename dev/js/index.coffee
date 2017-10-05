@@ -15,6 +15,6 @@ $ ->
 	mvPropaganda = new MVPropaganda($('#mv .mv__propaganda'))
 	$(window).load(->
 		twitterLayout = new TwitterLayout()
-		twitterLayout.init()
+		twitterLayout.init('sp')
 		mvPropaganda.init()
 	)

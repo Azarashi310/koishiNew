@@ -540,9 +540,14 @@ body:before {
   text-align: center; }
   #twitter .twitter__title img {
     margin-right: -10px; }
+#twitter .timeline {
+  margin-top: 17px;
+  border: solid 1px #000;
+  height: 205px;
+  overflow-y: scroll; }
 
 #contact {
-  margin-top: 271px; }
+  margin-top: 47px; }
   #contact .contact__title {
     text-align: center;
     margin: 0 auto;

@@ -1,3 +1,8 @@
+mixin importStyleSheet(filePath)
+    link(rel='stylesheet', type='text/css', href=filePath)
+
+mixin importJavascript(filePath)
+    script(type='text/javascript', src=filePath)
 mixin settingViewPort(setting, widthSize)
     if setting == 'fixed'
         meta(name='viewport', content='width = '+widthSize+',initial-scale=1.0,maximum-scale=1.0')

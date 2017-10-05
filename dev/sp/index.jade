@@ -11,6 +11,9 @@ block meta
     -var dir_root = "./";
     -var css = "";
     -var imgPath = "images/"
+block js
+    +importJavascript("../common/js/lib.js")
+    +importJavascript("./js/index.min.js")
 block contents
     #mv
         .mv__icon
@@ -60,6 +63,9 @@ block contents
         #twitter
             .twitter__title
                 +img('./images/twitter_title.png', 'ツイッター TWITTER')
+            .timeline
+                a.twitter-timeline(href="https://twitter.com/kokushiki")
+                script(async src="//platform.twitter.com/widgets.js",charset="utf-8")
         #contact
             .contact__title
                 +img('./images/contact_title.png', 'コンタクト CONTACT')

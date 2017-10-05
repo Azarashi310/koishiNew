@@ -1,0 +1,11 @@
+.timeline-Header {
+  display: none; }
+
+.timeline-Tweet-text {
+  font-size: 10px !important; }
+
+.timeline-Body.customisable-border {
+  border-top: 0; }
+
+button.timeline-LoadMore-prompt {
+  font-size: 10px !important; }
