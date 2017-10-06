@@ -1,19 +1,20 @@
 @import "../common/css/normalize";
 @import "../common/css/common";
+@import "../common/css/mixin";
 body{
-	&:before{
-		content: '';
-		position: absolute;
-		top:0;
-		width:100%;
-		height:10000px;
-		background-image: url('../images/damii.jpg');
-		background-size: 320px auto;
-		background-repeat: no-repeat;
-		background-position: top center;
-		opacity:0.2;
-		z-index:2;
-	}
+	//&:before{
+	//	content: '';
+	//	position: absolute;
+	//	top:0;
+	//	width:100%;
+	//	height:10000px;
+	//	background-image: url('../images/damii.jpg');
+	//	background-size: 320px auto;
+	//	background-repeat: no-repeat;
+	//	background-position: top center;
+	//	opacity:0.2;
+	//	z-index:2;
+	//}
 }
 #mv {
 	background-image: url('../images/mv_bg.jpg');;
@@ -58,10 +59,13 @@ body{
 		position: relative;
 		padding-bottom:50%;
 		.baloon{
-			padding:20px 15px 0 15px;
+			margin-top:2px;
+			margin-right:1%;
+			padding:18px 0 0 15px;
 			height:155px;
-			overflow: scroll;
+			overflow-y: scroll;
 			font-size:12px;
+			@include overFlowAreaScroll_to_smooth_for_iOSSafari();
 			.intro{
 				line-height: 1.8;
 				margin-bottom:21px;
@@ -79,6 +83,13 @@ body{
 					}
 				}
 			}
+		}
+		.baloon::-webkit-scrollbar{
+			background-color: #ccc;
+			width:10px;
+		}
+		.baloon::-webkit-scrollbar-thumb{
+			background-color: #000;
 		}
 		.author{
 			position: absolute;
@@ -102,6 +113,7 @@ body{
 		width:280px;
 		height:240px;
 		overflow-y: scroll;
+		@include overFlowAreaScroll_to_smooth_for_iOSSafari();
 		.list{
 			display: inline-block;
 			margin:10px 6px 0 6px;
@@ -115,8 +127,7 @@ body{
 }
 
 #fanart{
-	//margin-top:53px;
-	margin-top:290px;
+	margin-top:53px;
 	.fanart__title{
 		font-size:0;
 		width:76%;
@@ -128,7 +139,8 @@ body{
 		overflow-y: scroll;
 		width:280px;
 		height:240px;
-		margin:10px auto 0;
+		margin:14px auto 0;
+		@include overFlowAreaScroll_to_smooth_for_iOSSafari();
 		.list{
 			width:50px;
 			height:50px;
@@ -136,11 +148,17 @@ body{
 			margin:10px 6px 0;
 		}
 	}
+	.fanart_lists::-webkit-scrollbar{
+		background-color: #ccc;
+		width:10px;
+	}
+	.fanart_lists::-webkit-scrollbar-thumb{
+		background-color: #000;
+	}
 }
 
 #linestamp{
-	//margin-top:98px;
-	margin-top:108px;
+	margin-top:49px;
 	.linestamp__title{
 		font-size:0;
 		width:86%;
@@ -171,9 +189,10 @@ body{
 }
 
 #twitter{
+	margin-top:62px;
 	.twitter__title{
 		width:64%;
-		margin:66px auto 0;
+		margin:0 auto;
 		text-align: center;
 		img{
 			margin-right:-10px;
@@ -184,11 +203,20 @@ body{
 		border:solid 1px #000;
 		height:205px;
 		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+	.timeline::-webkit-scrollbar{
+		background-color: #ccc;
+		width:10px;
+	}
+	.timeline::-webkit-scrollbar-thumb{
+		background-color: #000;
 	}
 }
 
 #contact{
-	margin-top:47px;
+	margin-top:49px;
+	padding-bottom:16px;
 	.contact__title{
 		text-align: center;
 		margin:0 auto;
@@ -200,9 +228,11 @@ body{
 		border-radius: 6px;
 		background-color: rgba(255,255,255,0.4);
 		margin-top:16px;
+		padding-bottom:16px;
+		text-align: center;
 		&:before{
 			content: '';
-			width: 298px;
+			width: 100%;
 			height:100%;
 			display: block;
 			position: absolute;
@@ -217,13 +247,19 @@ body{
 
 		}
 		.subhead{
+			font-size:10px;
+			line-height: 1.8;
+			margin-top:10px;
 
 		}
 		.mailaddres{
-
+			font-size: 14px;
+			margin-top:5px;
 		}
 		.submit{
-			margin:0 auto;
+			margin:8px auto 0;
+			display: block;
+			width:57%;
 		}
 	}
 }

@@ -395,21 +395,6 @@ body {
   line-height: 50px;
   text-align: center; }
 
-body:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 10000px;
-  background-image: url("../images/damii.jpg");
-  -moz-background-size: 320px auto;
-    -o-background-size: 320px auto;
-       background-size: 320px auto;
-  background-repeat: no-repeat;
-  background-position: top center;
-  opacity: 0.2;
-  z-index: 2; }
-
 #mv {
   background-image: url("../images/mv_bg.jpg");
   background-position: -555px;
@@ -447,10 +432,13 @@ body:before {
     position: relative;
     padding-bottom: 50%; }
     #profile .profile__introductionArea .baloon {
-      padding: 20px 15px 0 15px;
+      margin-top: 2px;
+      margin-right: 1%;
+      padding: 18px 0 0 15px;
       height: 155px;
-      overflow: scroll;
-      font-size: 12px; }
+      overflow-y: scroll;
+      font-size: 12px;
+      -webkit-overflow-scrolling: touch; }
       #profile .profile__introductionArea .baloon .intro {
         line-height: 1.8;
         margin-bottom: 21px; }
@@ -460,6 +448,11 @@ body:before {
           display: block; }
         #profile .profile__introductionArea .baloon .achievements .list .text .detail {
           display: block; }
+    #profile .profile__introductionArea .baloon::-webkit-scrollbar {
+      background-color: #ccc;
+      width: 10px; }
+    #profile .profile__introductionArea .baloon::-webkit-scrollbar-thumb {
+      background-color: #000; }
     #profile .profile__introductionArea .author {
       position: absolute;
       width: 261px;
@@ -477,7 +470,8 @@ body:before {
     font-size: 0;
     width: 280px;
     height: 240px;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
     #character .character__lists .list {
       display: inline-block;
       margin: 10px 6px 0 6px; }
@@ -489,7 +483,7 @@ body:before {
                 border-radius: 50%; }
 
 #fanart {
-  margin-top: 290px; }
+  margin-top: 53px; }
   #fanart .fanart__title {
     font-size: 0;
     width: 76%;
@@ -500,15 +494,21 @@ body:before {
     overflow-y: scroll;
     width: 280px;
     height: 240px;
-    margin: 10px auto 0; }
+    margin: 14px auto 0;
+    -webkit-overflow-scrolling: touch; }
     #fanart .fanart_lists .list {
       width: 50px;
       height: 50px;
       display: inline-block;
       margin: 10px 6px 0; }
+  #fanart .fanart_lists::-webkit-scrollbar {
+    background-color: #ccc;
+    width: 10px; }
+  #fanart .fanart_lists::-webkit-scrollbar-thumb {
+    background-color: #000; }
 
 #linestamp {
-  margin-top: 108px; }
+  margin-top: 49px; }
   #linestamp .linestamp__title {
     font-size: 0;
     width: 86%;
@@ -534,20 +534,29 @@ body:before {
       #linestamp .linestamp__storeLink .link img {
         width: 89px; }
 
-#twitter .twitter__title {
-  width: 64%;
-  margin: 66px auto 0;
-  text-align: center; }
-  #twitter .twitter__title img {
-    margin-right: -10px; }
-#twitter .timeline {
-  margin-top: 17px;
-  border: solid 1px #000;
-  height: 205px;
-  overflow-y: scroll; }
+#twitter {
+  margin-top: 62px; }
+  #twitter .twitter__title {
+    width: 64%;
+    margin: 0 auto;
+    text-align: center; }
+    #twitter .twitter__title img {
+      margin-right: -10px; }
+  #twitter .timeline {
+    margin-top: 17px;
+    border: solid 1px #000;
+    height: 205px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
+  #twitter .timeline::-webkit-scrollbar {
+    background-color: #ccc;
+    width: 10px; }
+  #twitter .timeline::-webkit-scrollbar-thumb {
+    background-color: #000; }
 
 #contact {
-  margin-top: 47px; }
+  margin-top: 49px;
+  padding-bottom: 16px; }
   #contact .contact__title {
     text-align: center;
     margin: 0 auto;
@@ -559,10 +568,12 @@ body:before {
        -moz-border-radius: 6px;
             border-radius: 6px;
     background-color: rgba(255, 255, 255, 0.4);
-    margin-top: 16px; }
+    margin-top: 16px;
+    padding-bottom: 16px;
+    text-align: center; }
     #contact .contact__form:before {
       content: '';
-      width: 298px;
+      width: 100%;
       height: 100%;
       display: block;
       position: absolute;
@@ -574,5 +585,14 @@ body:before {
       right: -5px;
       bottom: -4px;
       z-index: 1; }
+    #contact .contact__form .subhead {
+      font-size: 10px;
+      line-height: 1.8;
+      margin-top: 10px; }
+    #contact .contact__form .mailaddres {
+      font-size: 14px;
+      margin-top: 5px; }
     #contact .contact__form .submit {
-      margin: 0 auto; }
+      margin: 8px auto 0;
+      display: block;
+      width: 57%; }
