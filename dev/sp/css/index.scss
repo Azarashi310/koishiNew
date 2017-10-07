@@ -2,6 +2,10 @@
 @import "../common/css/common";
 @import "../common/css/mixin";
 body{
+	background-image: url('../images/bg.jpg');
+	background-size: 100% auto;
+	background-position: top center;
+	background-repeat:repeat;
 	//&:before{
 	//	content: '';
 	//	position: absolute;

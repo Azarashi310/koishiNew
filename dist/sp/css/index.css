@@ -395,6 +395,14 @@ body {
   line-height: 50px;
   text-align: center; }
 
+body {
+  background-image: url("../images/bg.jpg");
+  -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+       background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat; }
+
 #mv {
   background-image: url("../images/mv_bg.jpg");
   background-position: -555px;
