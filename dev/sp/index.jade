@@ -23,35 +23,37 @@ block contents
             .profile__title
                 +img('./images/profile_title.png','プロフィール PROFILE')
             .profile__introductionArea
-                .baloon
-                    include ../common/jade/profile_text
+                .baloon__wrapper
+                    .baloon
+                        include ../common/jade/profile_text
                 .author
                     +img('./images/profile_author.png','KOISHI')
         #character
             .character__title
                 +img('./images/character_title.png','キャラクター CHARACTOR')
-            ul.character__lists
-                include ../common/jade/characterListData
-                -var count = ''
-                -for(var i=1; i < charaname.length; i++){
-                    -if(i < 10){
-                        -count = '0' + i
-                    -}else{
-                        -count = i
-                    -}
-                    li.list
-                        .thumb
+            .character__lists__wrapper
+                ul.character__lists
+                    include ../common/jade/characterListData
+                    -var count = ''
+                    -for(var i=1; i < charaname.length; i++){
+                        -if(i < 10){
+                            -count = '0' + i
+                        -}else{
+                            -count = i
+                        -}
+                        li.list
                             +img('./images/character_images/thumbs/character_thumb_' + count + '.png','hoge')
-                -}
+                    -}
         #fanart
             .fanart__title
                 +img('./images/fanart_title.png','ファンアート FAN ART')
             -var copylightCount = 28;
-            ul.fanart_lists
-                -for(var i = 1; i <= copylightCount; i++){
-                    li.list
-                        img(src='./images/copylightworks/thumbs/copylightworks_thumbnail_' + i + '.png',alt="")
-                -}
+            .fanart_lists__wrapper
+                ul.fanart_lists
+                    -for(var i = 1; i <= copylightCount; i++){
+                        li.list
+                            img(src='./images/copylightworks/thumbs/copylightworks_thumbnail_' + i + '.png',alt="")
+                    -}
         #linestamp
             .linestamp__title
                 +img('./images/line_title.png','オリジナルLINEスタンプ LINE STAMP')

@@ -431,14 +431,16 @@ body {
     overflow-y: hidden;
     position: relative;
     padding-bottom: 50%; }
-    #profile .profile__introductionArea .baloon {
+    #profile .profile__introductionArea .baloon__wrapper {
       margin-top: 2px;
       margin-right: 1%;
-      padding: 18px 0 0 15px;
-      height: 155px;
+      padding: 18px 0 51.67% 15px;
+      height: 0;
       overflow-y: scroll;
       font-size: 12px;
       -webkit-overflow-scrolling: touch; }
+    #profile .profile__introductionArea .baloon {
+      height: 100%; }
       #profile .profile__introductionArea .baloon .intro {
         line-height: 1.8;
         margin-bottom: 21px; }
@@ -455,32 +457,34 @@ body {
       background-color: #000; }
     #profile .profile__introductionArea .author {
       position: absolute;
-      width: 261px;
+      width: 87%;
       right: 0;
-      bottom: -2%; }
+      top: 43%; }
 
 #character {
   margin-top: 50px; }
   #character .character__title {
-    width: 232px;
+    width: 77.334%;
     margin: 0 auto; }
-  #character .character__lists {
-    margin: 2px auto 0;
+  #character .character__lists__wrapper {
+    margin: 0.67% auto 0;
     text-align: center;
     font-size: 0;
-    width: 280px;
-    height: 240px;
+    width: 93.334%;
+    height: 0;
+    padding-bottom: 80%;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch; }
+  #character .character__lists {
+    height: 100%; }
     #character .character__lists .list {
       display: inline-block;
-      margin: 10px 6px 0 6px; }
-      #character .character__lists .list .thumb {
-        width: 50px;
-        background-color: #b81919;
-        -webkit-border-radius: 50%;
-           -moz-border-radius: 50%;
-                border-radius: 50%; }
+      margin: 10px 6px 0 6px;
+      width: 17.86%;
+      background-color: #b81919;
+      -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+              border-radius: 50%; }
 
 #fanart {
   margin-top: 53px; }
@@ -488,17 +492,21 @@ body {
     font-size: 0;
     width: 76%;
     margin: 0 auto; }
-  #fanart .fanart_lists {
+  #fanart .fanart_lists__wrapper {
     text-align: center;
     font-size: 0;
     overflow-y: scroll;
-    width: 280px;
-    height: 240px;
-    margin: 14px auto 0;
+    width: 93.336%;
+    height: 0;
+    margin: 4.67% auto 0;
+    padding-bottom: 80%;
     -webkit-overflow-scrolling: touch; }
+  #fanart .fanart_lists {
+    height: 100%; }
     #fanart .fanart_lists .list {
-      width: 50px;
-      height: 50px;
+      width: 18.52%;
+      height: 0;
+      padding-bottom: 18.52%;
       display: inline-block;
       margin: 10px 6px 0; }
   #fanart .fanart_lists::-webkit-scrollbar {
@@ -516,14 +524,14 @@ body {
   #linestamp .linestamp__stamps {
     font-size: 0;
     text-align: center;
-    width: 285px;
-    margin: 10px auto 0; }
+    width: 95%;
+    margin: 3.334% auto 0; }
   #linestamp .linestamp__storeLink {
-    margin-top: 38px; }
+    margin-top: 12.67%; }
     #linestamp .linestamp__storeLink .link {
       background-color: #00cd22;
-      width: 167px;
-      padding: 15px 0;
+      width: 55.67%;
+      padding: 5% 0;
       margin: 0 auto;
       display: block;
       -webkit-border-radius: 4px;
@@ -543,7 +551,7 @@ body {
     #twitter .twitter__title img {
       margin-right: -10px; }
   #twitter .timeline {
-    margin-top: 17px;
+    margin-top: 5.667%;
     border: solid 1px #000;
     height: 205px;
     overflow-y: scroll;

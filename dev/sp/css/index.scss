@@ -58,14 +58,17 @@ body{
 		overflow-y: hidden;
 		position: relative;
 		padding-bottom:50%;
-		.baloon{
+		.baloon__wrapper{
 			margin-top:2px;
 			margin-right:1%;
-			padding:18px 0 0 15px;
-			height:155px;
+			padding:18px 0 51.67% 15px;
+			height:0;
 			overflow-y: scroll;
 			font-size:12px;
 			@include overFlowAreaScroll_to_smooth_for_iOSSafari();
+		}
+		.baloon{
+			height:100%;
 			.intro{
 				line-height: 1.8;
 				margin-bottom:21px;
@@ -93,9 +96,9 @@ body{
 		}
 		.author{
 			position: absolute;
-			width: 261px;
+			width: 87%;
 			right: 0;
-			bottom: -2%;
+			top: 43%;
 		}
 	}
 }
@@ -103,25 +106,27 @@ body{
 #character{
 	margin-top:50px;
 	.character__title{
-		width:232px;
+		width:77.334%;
 		margin:0 auto;
 	}
-	.character__lists{
-		margin:2px auto 0;
+	.character__lists__wrapper{
+		margin:0.67% auto 0;
 		text-align: center;
 		font-size:0;
-		width:280px;
-		height:240px;
+		width:93.334%;
+		height:0;
+		padding-bottom:80%;
 		overflow-y: scroll;
 		@include overFlowAreaScroll_to_smooth_for_iOSSafari();
+	}
+	.character__lists{
+		height:100%;
 		.list{
 			display: inline-block;
 			margin:10px 6px 0 6px;
-			.thumb{
-				width:50px;
-				background-color: #b81919;
-				border-radius: 50%
-			}
+			width:17.86%;
+			background-color: #b81919;
+			border-radius: 50%;
 		}
 	}
 }
@@ -133,17 +138,22 @@ body{
 		width:76%;
 		margin:0 auto;
 	}
-	.fanart_lists{
+	.fanart_lists__wrapper{
 		text-align: center;
 		font-size:0;
 		overflow-y: scroll;
-		width:280px;
-		height:240px;
-		margin:14px auto 0;
+		width:93.336%;
+		height:0;
+		margin:4.67% auto 0;
+		padding-bottom:80%;
 		@include overFlowAreaScroll_to_smooth_for_iOSSafari();
+	}
+	.fanart_lists{
+		height:100%;
 		.list{
-			width:50px;
-			height:50px;
+			width: 18.52%;
+			height: 0;
+			padding-bottom: 18.52%;
 			display: inline-block;
 			margin:10px 6px 0;
 		}
@@ -167,15 +177,15 @@ body{
 	.linestamp__stamps{
 		font-size:0;
 		text-align: center;
-		width:285px;
-		margin:10px auto 0;
+		width:95%;
+		margin:3.334% auto 0;
 	}
 	.linestamp__storeLink{
-		margin-top:38px;
+		margin-top:12.67%;
 		.link{
 			background-color: #00cd22;
-			width:167px;
-			padding:15px 0;
+			width:55.67%;
+			padding:5% 0;
 			margin:0 auto;
 			display: block;
 			border-radius: 4px;
@@ -199,7 +209,7 @@ body{
 		}
 	}
 	.timeline{
-		margin-top:17px;
+		margin-top:5.667%;
 		border:solid 1px #000;
 		height:205px;
 		overflow-y: scroll;
