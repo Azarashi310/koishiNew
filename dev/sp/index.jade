@@ -32,7 +32,7 @@ block contents
             .character__title
                 +img('./images/character_title.png','キャラクター CHARACTOR')
             .character__lists__wrapper
-                ul.character__lists
+                ul.character__lists.slick-dots
                     include ../common/jade/characterListData
                     -var count = ''
                     -for(var i=1; i < charaname.length; i++){
@@ -41,9 +41,28 @@ block contents
                         -}else{
                             -count = i
                         -}
-                        li.list
+                        li.list.modal__button__open(data-listNum=count)
                             +img('./images/character_images/thumbs/character_thumb_' + count + '.png','hoge')
                     -}
+                .modal
+                    .modal__button__close
+
+                    ul.slidShow.slick
+                        -var count = ''
+                        -for(var i = 1; i < charatext.length; i++){
+                            -if(i < 10){
+                                -count = '0' + i
+                            -}else{
+                                -count = i
+                            -}
+                            li.list
+                                .chracter
+                                    img(src="", alt="")
+                                .name
+                                    img(src="", alt="")
+                                .description
+                                    img(src="", alt="")
+                        -}
         #fanart
             .fanart__title
                 +img('./images/fanart_title.png','ファンアート FAN ART')
@@ -54,13 +73,15 @@ block contents
                         li.list
                             img(src='./images/copylightworks/thumbs/copylightworks_thumbnail_' + i + '.png',alt="")
                     -}
+            .modal
+                .modal__button__close
         #linestamp
             .linestamp__title
                 +img('./images/line_title.png','オリジナルLINEスタンプ LINE STAMP')
             .linestamp__stamps
                 +img('./images/line_stamps.png','ラインスタンプ画像')
             .linestamp__storeLink
-                a.link(href='./',target='_blank')
+                a.link(href='https://store.line.me/stickershop/product/1165896/ja',target='_blank')
                     +img('./images/line_link_text.png',alt='LINE STORE')
         #twitter
             .twitter__title

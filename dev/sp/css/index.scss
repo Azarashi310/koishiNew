@@ -1,6 +1,12 @@
 @import "../common/css/normalize";
 @import "../common/css/common";
 @import "../common/css/mixin";
+
+// slick
+@import "slick";
+@import "slick-theme";
+
+
 body{
 	background-image: url('../images/bg.jpg');
 	background-size: 100% auto;
@@ -20,6 +26,7 @@ body{
 	//	z-index:2;
 	//}
 }
+
 #mv {
 	background-image: url('../images/mv_bg.jpg');;
 	background-position: -555px;
@@ -109,6 +116,7 @@ body{
 
 #character{
 	margin-top:50px;
+	@include modalSettings;
 	.character__title{
 		width:77.334%;
 		margin:0 auto;
@@ -137,6 +145,7 @@ body{
 
 #fanart{
 	margin-top:53px;
+	@include modalSettings;
 	.fanart__title{
 		font-size:0;
 		width:76%;
@@ -258,7 +267,8 @@ body{
 			z-index:1;
 		}
 		.form__inner{
-
+			position: relative;
+			z-index:3;
 		}
 		.subhead{
 			font-size:10px;
@@ -274,6 +284,7 @@ body{
 			margin:8px auto 0;
 			display: block;
 			width:57%;
+			font-size: 0;
 		}
 	}
 }

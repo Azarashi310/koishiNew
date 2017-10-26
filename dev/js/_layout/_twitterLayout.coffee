@@ -3,7 +3,7 @@ class TwitterLayout
     @twFrame = $('iframe.twitter-timeline')
 
   init: (isSP)->
-    console.log @twFrame
+#    console.log @twFrame
     if @twFrame.length == undefined
       setTimeout @init, 500
     else
