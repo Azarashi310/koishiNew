@@ -1,3 +1,4 @@
+# 要Jquery(当方1.12.4)
 # 使い方
 # modalElementにはmodalを包んでいる要素を渡してください。
 # fixedElementにはmodalを表示させる際に、スクロールさせたくない

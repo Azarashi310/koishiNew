@@ -57,11 +57,11 @@ block contents
                             -}
                             li.list
                                 .chracter
-                                    img(src="", alt="")
+                                    img(src="../images/detail/detail_" + i + ".png", alt=charaname[i])
                                 .name
-                                    img(src="", alt="")
+                                    img(src="../images/name/name_" + i + '.png', alt=charaname[i])
                                 .description
-                                    img(src="", alt="")
+                                    p.text #{charatext[i]}
                         -}
         #fanart
             .fanart__title
@@ -70,7 +70,12 @@ block contents
             .fanart_lists__wrapper
                 ul.fanart_lists
                     -for(var i = 1; i <= copylightCount; i++){
-                        li.list
+                        -if(i < 10){
+                            -count = '0' + i
+                        -}else{
+                            -count = i
+                        -}
+                        li.list.modal__button__open(data-listNum = count)
                             img(src='./images/copylightworks/thumbs/copylightworks_thumbnail_' + i + '.png',alt="")
                     -}
             .modal

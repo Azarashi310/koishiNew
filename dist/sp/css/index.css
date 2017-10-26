@@ -679,7 +679,8 @@ body {
       height: 15px;
       position: absolute;
       top: 15px;
-      right: 10px; }
+      right: 10px;
+      z-index: 2; }
       #character .modal .modal__button__close:before, #character .modal .modal__button__close:after {
         position: absolute;
         content: '';
@@ -699,6 +700,9 @@ body {
             -ms-transform: rotate(-45deg);
              -o-transform: rotate(-45deg);
                 transform: rotate(-45deg); }
+  #character .slick .list {
+    width: 300px;
+    padding: 50px 10px 0; }
   #character .character__title {
     width: 77.334%;
     margin: 0 auto; }
@@ -740,7 +744,8 @@ body {
       height: 15px;
       position: absolute;
       top: 15px;
-      right: 10px; }
+      right: 10px;
+      z-index: 2; }
       #fanart .modal .modal__button__close:before, #fanart .modal .modal__button__close:after {
         position: absolute;
         content: '';

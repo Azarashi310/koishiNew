@@ -12,19 +12,6 @@ body{
 	background-size: 100% auto;
 	background-position: top center;
 	background-repeat:repeat;
-	//&:before{
-	//	content: '';
-	//	position: absolute;
-	//	top:0;
-	//	width:100%;
-	//	height:10000px;
-	//	background-image: url('../images/damii.jpg');
-	//	background-size: 320px auto;
-	//	background-repeat: no-repeat;
-	//	background-position: top center;
-	//	opacity:0.2;
-	//	z-index:2;
-	//}
 }
 
 #mv {
@@ -117,6 +104,12 @@ body{
 #character{
 	margin-top:50px;
 	@include modalSettings;
+	.slick{
+		.list{
+			width:300px;
+			padding:50px 10px 0;
+		}
+	}
 	.character__title{
 		width:77.334%;
 		margin:0 auto;

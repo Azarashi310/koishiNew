@@ -3,11 +3,13 @@ Modal = require('./_layout/modal')
 TwitterLayout = require('../../js/_layout/_twitterLayout')
 
 $ ->
-  characterSlick = new Slick($('#character .character__lists'), $('#character .modal .slidShow'))
+  characterSlick = new Slick($('#character .modal .slick'), $('#character .slick-dots'))
   characterSlick.init();
   $(window).load(->
     twitterLayout = new TwitterLayout()
     twitterLayout.init(true)
-    modalLib = new Modal($('#character'),$('#main'))
-    modalLib.init()
+    characterModal = new Modal($('#character'),$('#main'))
+    characterModal.init()
+    fanArtModal = new Modal($('#fanart'),$('#main'))
+    fanArtModal.init()
   )
