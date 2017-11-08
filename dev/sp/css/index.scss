@@ -1,283 +1,309 @@
 @import "../common/css/normalize";
 @import "../common/css/common";
 @import "../common/css/mixin";
-
 // slick
 @import "slick";
 @import "slick-theme";
 
-
-body{
-	background-image: url('../images/bg.jpg');
-	background-size: 100% auto;
-	background-position: top center;
-	background-repeat:repeat;
+body {
+  background-image: url('../images/bg.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat;
+  &:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/damii_modal.jpg');
+    background-size: 100%;
+  }
 }
 
 #mv {
-	background-image: url('../images/mv_bg.jpg');;
-	background-position: -555px;
-	background-size: cover;
-	height: 568px;
-	position: relative;
-	font-size:0;
-	.mv__icon{
-		width:234px;
-		height:233px;
-		//width: 73.125%;
-		//height: 41.023%;
-		position: absolute;
-		top:127px;
-		left:50%;
-		margin-left:-117px;
-		//margin:auto;
-		//top:0;
-		//right:0;
-		//bottom:0;
-		//left:0;
-	}
+  height: 100%;
+  position: relative;
+  .mv__bg {
+    background-image: url('../images/mv_bg.jpg');;
+    background-position: -555px;
+    background-size: cover;
+    //height: 568px;
+    padding-bottom: 177.5%;
+    position: relative;
+    font-size: 0;
+  }
+  .mv__icon {
+    width: auto;
+    height: 40.85%;
+    //width: 73.125%;
+    //height: 41.023%;
+    position: absolute;
+    top: 127px;
+    left: 50%;
+    margin-left: -117px;
+    //margin:auto;
+    //top:0;
+    //right:0;
+    //bottom:0;
+    //left:0;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
 }
 
-#profile{
-	padding-top:47px;
-	.profile__title{
-		width: 74.334%;
-		margin:0 auto;
-		font-size:0;
-	}
-	.profile__introductionArea{
-		background-image: url('../images/profile_baloon.png');
-		background-position: top center;
-		background-repeat: no-repeat;
-		background-size: 100% 65.5%;
-		width:100%;
-		height:auto;
-		margin:20px auto 0 auto;
-		overflow-y: hidden;
-		position: relative;
-		padding-bottom:50%;
-		.baloon__wrapper{
-			margin-top:2px;
-			margin-right:1%;
-			padding:18px 0 51.67% 15px;
-			height:0;
-			overflow-y: scroll;
-			font-size:12px;
-			@include overFlowAreaScroll_to_smooth_for_iOSSafari();
-		}
-		.baloon{
-			height:100%;
-			.intro{
-				line-height: 1.8;
-				margin-bottom:21px;
-			}
-			.achievements{
-				.list{
-					margin-bottom:10px;
-					.text{
-						.date{
-							display: block;
-						}
-						.detail{
-							display: block;
-						}
-					}
-				}
-			}
-		}
-		.baloon::-webkit-scrollbar{
-			background-color: #ccc;
-			width:10px;
-		}
-		.baloon::-webkit-scrollbar-thumb{
-			background-color: #000;
-		}
-		.author{
-			position: absolute;
-			width: 87%;
-			right: 0;
-			top: 43%;
-		}
-	}
+#profile {
+  padding-top: 47px;
+  .profile__title {
+    width: 74.334%;
+    margin: 0 auto;
+    font-size: 0;
+  }
+  .profile__introductionArea {
+    background-image: url('../images/profile_baloon.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 65.5%;
+    width: 100%;
+    height: auto;
+    margin: 20px auto 0 auto;
+    overflow-y: hidden;
+    position: relative;
+    padding-bottom: 50%;
+    .baloon__wrapper {
+      margin-top: 2px;
+      margin-right: 1%;
+      padding: 18px 0 51.67% 15px;
+      height: 0;
+      overflow-y: scroll;
+      font-size: 12px;
+      @include overFlowAreaScroll_to_smooth_for_iOSSafari();
+    }
+    .baloon {
+      height: 100%;
+      .intro {
+        line-height: 1.8;
+        margin-bottom: 21px;
+      }
+      .achievements {
+        .list {
+          margin-bottom: 10px;
+          .text {
+            .date {
+              display: block;
+            }
+            .detail {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .baloon::-webkit-scrollbar {
+      background-color: #ccc;
+      width: 10px;
+    }
+    .baloon::-webkit-scrollbar-thumb {
+      background-color: #000;
+    }
+    .author {
+      position: absolute;
+      width: 87%;
+      right: 0;
+      top: 43%;
+    }
+  }
 }
 
-#character{
-	margin-top:50px;
-	@include modalSettings;
-	.slick{
-		.list{
-			width:300px;
-			padding:50px 10px 0;
-		}
-	}
-	.character__title{
-		width:77.334%;
-		margin:0 auto;
-	}
-	.character__lists__wrapper{
-		margin:0.67% auto 0;
-		text-align: center;
-		font-size:0;
-		width:93.334%;
-		height:0;
-		padding-bottom:80%;
-		overflow-y: scroll;
-		@include overFlowAreaScroll_to_smooth_for_iOSSafari();
-	}
-	.character__lists{
-		height:100%;
-		.list{
-			display: inline-block;
-			margin:10px 6px 0 6px;
-			width:17.86%;
-			background-color: #b81919;
-			border-radius: 50%;
-		}
-	}
+#character {
+  margin-top: 50px;
+  @include modalSettings;
+  .slick {
+    .list {
+      width: 300px;
+      padding: 50px 10px 0;
+    }
+  }
+  .character__title {
+    width: 77.334%;
+    margin: 0 auto;
+  }
+  .character__lists__wrapper {
+    margin: 0.67% auto 0;
+    text-align: center;
+    font-size: 0;
+    width: 93.334%;
+    height: 0;
+    padding-bottom: 80%;
+    overflow-y: scroll;
+    @include overFlowAreaScroll_to_smooth_for_iOSSafari();
+  }
+  .character__lists {
+    height: 100%;
+    .list {
+      display: inline-block;
+      margin: 10px 6px 0 6px;
+      width: 17.86%;
+      background-color: #b81919;
+      border-radius: 50%;
+    }
+  }
+  .modal{
+    .list{
+      .name{
+        margin-top:2.67%;
+        width:84%;
+      }
+    }
+  }
 }
 
-#fanart{
-	margin-top:53px;
-	@include modalSettings;
-	.fanart__title{
-		font-size:0;
-		width:76%;
-		margin:0 auto;
-	}
-	.fanart_lists__wrapper{
-		text-align: center;
-		font-size:0;
-		overflow-y: scroll;
-		width:93.336%;
-		height:0;
-		margin:4.67% auto 0;
-		padding-bottom:80%;
-		@include overFlowAreaScroll_to_smooth_for_iOSSafari();
-	}
-	.fanart_lists{
-		height:100%;
-		.list{
-			width: 18.52%;
-			height: 0;
-			padding-bottom: 18.52%;
-			display: inline-block;
-			margin:10px 6px 0;
-		}
-	}
-	.fanart_lists::-webkit-scrollbar{
-		background-color: #ccc;
-		width:10px;
-	}
-	.fanart_lists::-webkit-scrollbar-thumb{
-		background-color: #000;
-	}
+#fanart {
+  margin-top: 53px;
+  @include modalSettings;
+  .fanart__title {
+    font-size: 0;
+    width: 76%;
+    margin: 0 auto;
+  }
+  .fanart_lists__wrapper {
+    text-align: center;
+    font-size: 0;
+    overflow-y: scroll;
+    width: 93.336%;
+    height: 0;
+    margin: 4.67% auto 0;
+    padding-bottom: 80%;
+    @include overFlowAreaScroll_to_smooth_for_iOSSafari();
+  }
+  .fanart_lists {
+    height: 100%;
+    .list {
+      width: 18.52%;
+      height: 0;
+      padding-bottom: 18.52%;
+      display: inline-block;
+      margin: 10px 6px 0;
+    }
+  }
+  .fanart_lists::-webkit-scrollbar {
+    background-color: #ccc;
+    width: 10px;
+  }
+  .fanart_lists::-webkit-scrollbar-thumb {
+    background-color: #000;
+  }
 }
 
-#linestamp{
-	margin-top:49px;
-	.linestamp__title{
-		font-size:0;
-		width:86%;
-		margin:0 auto;
-	}
-	.linestamp__stamps{
-		font-size:0;
-		text-align: center;
-		width:95%;
-		margin:3.334% auto 0;
-	}
-	.linestamp__storeLink{
-		margin-top:12.67%;
-		.link{
-			background-color: #00cd22;
-			width:55.67%;
-			padding:5% 0;
-			margin:0 auto;
-			display: block;
-			border-radius: 4px;
-			text-align: center;
-			font-size:0;
-			img{
-				width:89px;
-			}
-		}
-	}
+#linestamp {
+  margin-top: 49px;
+  .linestamp__title {
+    font-size: 0;
+    width: 86%;
+    margin: 0 auto;
+  }
+  .linestamp__stamps {
+    font-size: 0;
+    text-align: center;
+    width: 95%;
+    margin: 3.334% auto 0;
+  }
+  .linestamp__storeLink {
+    margin-top: 12.67%;
+    .link {
+      background-color: #00cd22;
+      width: 55.67%;
+      padding: 5% 0;
+      margin: 0 auto;
+      display: block;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 0;
+      img {
+        width: 89px;
+      }
+    }
+  }
 }
 
-#twitter{
-	margin-top:62px;
-	.twitter__title{
-		width:64%;
-		margin:0 auto;
-		text-align: center;
-		img{
-			margin-right:-10px;
-		}
-	}
-	.timeline{
-		margin-top:5.667%;
-		border:solid 1px #000;
-		height:205px;
-		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
-	}
-	.timeline::-webkit-scrollbar{
-		background-color: #ccc;
-		width:10px;
-	}
-	.timeline::-webkit-scrollbar-thumb{
-		background-color: #000;
-	}
+#twitter {
+  margin-top: 62px;
+  .twitter__title {
+    width: 64%;
+    margin: 0 auto;
+    text-align: center;
+    img {
+      margin-right: -10px;
+    }
+  }
+  .timeline {
+    margin-top: 5.667%;
+    border: solid 1px #000;
+    height: 205px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .timeline::-webkit-scrollbar {
+    background-color: #ccc;
+    width: 10px;
+  }
+  .timeline::-webkit-scrollbar-thumb {
+    background-color: #000;
+  }
 }
 
-#contact{
-	margin-top:49px;
-	padding-bottom:16px;
-	.contact__title{
-		text-align: center;
-		margin:0 auto;
-		width:63%;
-	}
-	.contact__form{
-		position: relative;
-		border:solid 3px #000;
-		border-radius: 6px;
-		background-color: rgba(255,255,255,0.4);
-		margin-top:16px;
-		padding-bottom:16px;
-		text-align: center;
-		&:before{
-			content: '';
-			width: 100%;
-			height:100%;
-			display: block;
-			position: absolute;
-			border-radius: 6px;
-			border-right:4px solid #000;
-			border-bottom:4px solid #000;
-			right:-5px;
-			bottom:-4px;
-			z-index:1;
-		}
-		.form__inner{
-			position: relative;
-			z-index:3;
-		}
-		.subhead{
-			font-size:10px;
-			line-height: 1.8;
-			margin-top:10px;
+#contact {
+  margin-top: 49px;
+  padding-bottom: 16px;
+  .contact__title {
+    text-align: center;
+    margin: 0 auto;
+    width: 63%;
+  }
+  .contact__form {
+    position: relative;
+    border: solid 3px #000;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      border-radius: 6px;
+      border-right: 4px solid #000;
+      border-bottom: 4px solid #000;
+      right: -5px;
+      bottom: -4px;
+      z-index: 1;
+    }
+    .form__inner {
+      position: relative;
+      z-index: 3;
+    }
+    .subhead {
+      font-size: 10px;
+      line-height: 1.8;
+      margin-top: 10px;
 
-		}
-		.mailaddres{
-			font-size: 14px;
-			margin-top:5px;
-		}
-		.submit{
-			margin:8px auto 0;
-			display: block;
-			width:57%;
-			font-size: 0;
-		}
-	}
+    }
+    .mailaddres {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .submit {
+      margin: 8px auto 0;
+      display: block;
+      width: 57%;
+      font-size: 0;
+    }
+  }
 }

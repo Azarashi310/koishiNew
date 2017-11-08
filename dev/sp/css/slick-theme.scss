@@ -103,33 +103,37 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev {
     left: 0px;
-    top:225px;
+    top:164px;
     z-index:10;
     &:before {
         content: '';
-        background-image: url("../../images/slideshow_arrow_left.png");
+        background-image: url("../images/modal_arrow_left.png");
+        background-size:cover;
         position: absolute;
         display: block;
-        width:16px;
-        height:28px;
+        width:10px;
+        height:18px;
         top:-50%;
-        margin-top: 5px;
+        left:10px;
+        margin-top: 10px;
     }
 }
 
 .slick-next {
-    right: -4px;
-    top:225px;
+    right: 5px;
+    top:163px;
     z-index:10;
     &:before {
         content: '';
-        background-image: url("../../images/slideshow_arrow_right.png");
+        background-image: url("../images/modal_arrow_right.png");
+        background-size:cover;
         position: absolute;
         display: block;
-        width:16px;
-        height:28px;
+        width:10px;
+        height:18px;
         top:-50%;
-        margin-top: 5px;
+        margin-top: 10px;
+        right:5px;
     }
 }
 /* Dots */

@@ -21,15 +21,15 @@
       width:15px;
       height:15px;
       position: absolute;
-      top:15px;
-      right:10px;
+      top:22px;
+      right:11px;
       z-index:2;
       &:before,&:after{
         position: absolute;
         content: '';
         display: block;
-        width:15px;
-        height:2px;
+        width:17px;
+        height:1px;
         background-color: #000;
       }
       &:before{

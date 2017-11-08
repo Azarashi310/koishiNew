@@ -520,31 +520,39 @@ body {
 
 .slick-prev {
   left: 0px;
-  top: 225px;
+  top: 164px;
   z-index: 10; }
   .slick-prev:before {
     content: '';
-    background-image: url("../../images/slideshow_arrow_left.png");
+    background-image: url("../images/modal_arrow_left.png");
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover;
     position: absolute;
     display: block;
-    width: 16px;
-    height: 28px;
+    width: 10px;
+    height: 18px;
     top: -50%;
-    margin-top: 5px; }
+    left: 10px;
+    margin-top: 10px; }
 
 .slick-next {
-  right: -4px;
-  top: 225px;
+  right: 5px;
+  top: 163px;
   z-index: 10; }
   .slick-next:before {
     content: '';
-    background-image: url("../../images/slideshow_arrow_right.png");
+    background-image: url("../images/modal_arrow_right.png");
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover;
     position: absolute;
     display: block;
-    width: 16px;
-    height: 28px;
+    width: 10px;
+    height: 18px;
     top: -50%;
-    margin-top: 5px; }
+    margin-top: 10px;
+    right: 5px; }
 
 /* Dots */
 .slick-dotted.slick-slider {
@@ -594,23 +602,41 @@ body {
        background-size: 100% auto;
   background-position: top center;
   background-repeat: repeat; }
+  body:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/damii_modal.jpg");
+    -moz-background-size: 100%;
+      -o-background-size: 100%;
+         background-size: 100%; }
 
 #mv {
-  background-image: url("../images/mv_bg.jpg");
-  background-position: -555px;
-  -moz-background-size: cover;
-    -o-background-size: cover;
-       background-size: cover;
-  height: 568px;
-  position: relative;
-  font-size: 0; }
+  height: 100%;
+  position: relative; }
+  #mv .mv__bg {
+    background-image: url("../images/mv_bg.jpg");
+    background-position: -555px;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover;
+    padding-bottom: 177.5%;
+    position: relative;
+    font-size: 0; }
   #mv .mv__icon {
-    width: 234px;
-    height: 233px;
+    width: auto;
+    height: 40.85%;
     position: absolute;
     top: 127px;
     left: 50%;
     margin-left: -117px; }
+    #mv .mv__icon img {
+      width: auto;
+      height: 100%; }
 
 #profile {
   padding-top: 47px; }
@@ -678,15 +704,15 @@ body {
       width: 15px;
       height: 15px;
       position: absolute;
-      top: 15px;
-      right: 10px;
+      top: 22px;
+      right: 11px;
       z-index: 2; }
       #character .modal .modal__button__close:before, #character .modal .modal__button__close:after {
         position: absolute;
         content: '';
         display: block;
-        width: 15px;
-        height: 2px;
+        width: 17px;
+        height: 1px;
         background-color: #000; }
       #character .modal .modal__button__close:before {
         -webkit-transform: rotate(45deg);
@@ -725,6 +751,9 @@ body {
       -webkit-border-radius: 50%;
          -moz-border-radius: 50%;
               border-radius: 50%; }
+  #character .modal .list .name {
+    margin-top: 2.67%;
+    width: 84%; }
 
 #fanart {
   margin-top: 53px; }
@@ -743,15 +772,15 @@ body {
       width: 15px;
       height: 15px;
       position: absolute;
-      top: 15px;
-      right: 10px;
+      top: 22px;
+      right: 11px;
       z-index: 2; }
       #fanart .modal .modal__button__close:before, #fanart .modal .modal__button__close:after {
         position: absolute;
         content: '';
         display: block;
-        width: 15px;
-        height: 2px;
+        width: 17px;
+        height: 1px;
         background-color: #000; }
       #fanart .modal .modal__button__close:before {
         -webkit-transform: rotate(45deg);
